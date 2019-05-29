@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a003dd3-d63a-4070-91fe-59dde16e5f50" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/client-main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/client-main.css" afterDir="false" />
     </list>
@@ -19,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client-index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
+            <state relative-caret-position="701">
+              <caret line="70" column="37" selection-start-line="70" selection-start-column="37" selection-end-line="70" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -28,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/client-main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="38" column="20" lean-forward="true" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+            <state relative-caret-position="272">
+              <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -43,8 +44,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/admin-index.html" />
-        <option value="$PROJECT_DIR$/css/client-main.css" />
         <option value="$PROJECT_DIR$/client-index.html" />
+        <option value="$PROJECT_DIR$/css/client-main.css" />
       </list>
     </option>
   </component>
@@ -108,12 +109,15 @@
       <option name="presentableId" value="Default" />
       <updated>1558904426680</updated>
       <workItem from="1558904430852" duration="7903000" />
-      <workItem from="1558965107059" duration="11419000" />
+      <workItem from="1558965107059" duration="11784000" />
+      <workItem from="1559041625752" duration="14000" />
+      <workItem from="1559041676979" duration="5371000" />
+      <workItem from="1559122725869" duration="3932000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19322000" />
+    <option name="totallyTimeSpent" value="29004000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="20" width="1342" height="688" extended-state="0" />
@@ -151,15 +155,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/client-main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="38" column="20" lean-forward="true" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+        <state relative-caret-position="272">
+          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client-index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
+        <state relative-caret-position="701">
+          <caret line="70" column="37" selection-start-line="70" selection-start-column="37" selection-end-line="70" selection-end-column="37" />
         </state>
       </provider>
     </entry>
