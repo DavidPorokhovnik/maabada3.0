@@ -13,7 +13,7 @@ html, body {
 header {
 
 }
-.toolbar-row, .top-nav-row {
+.toolbar-row/*, .top-nav-row*/ {
     position: fixed;
     left: 0;
     right: 0;
@@ -26,59 +26,87 @@ header {
     z-index: 3;
 }
 .toolbar-row {
-    height: 64px;
+    height: 48px;
     padding: 0 24px;
     background-color: #fafafa;
-}
-.title, .title-caption {
-    line-height: 64px;
-    font-size: 26px;
-    color: #2973ad;
-}
-.logo-name {
-    line-height: 64px;
-    padding: 0 8px;
-    font-size: 26px;
-    font-weight: 600;
-    color: #2973ad;
-}
-.logo {
-    position: relative;
-    margin-top: -12px;
-}
-
-.top-nav-row {
-    top: 64px;
-    height: 48px;
-    padding: 0 8px 0 24px;
-    background-color: #2973ad;
-    /*box-shadow: 0 2px 5px 0 rgba(0,0,0,0.30);*/
-    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
 }
 .phone-number, .phone-number-caption {
     line-height: 48px;
     font-size: 20px;
-    color: #eceff1;
+    color: #2973ad;
 }
 .phone-number {
     font-weight: 600;
 }
 .phone-number:hover {
-    color: #fff;
+    color: #00487d;
+    cursor: pointer;
 }
 .phone-number-caption {
     padding: 0 8px;
 }
-.nav-link {
-    padding: 9px 16px;
-    color: #fff;
+.title, .title-caption {
+    line-height: 48px;
     font-size: 20px;
-    font-weight: 600;
+    color: #2973ad;
+}
+
+.top-nav-row {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 48px;
+    height: 64px;
+    /*padding: 0 8px 0 24px;*/
+    background-color: #2973ad;
+    /*box-shadow: 0 2px 5px 0 rgba(0,0,0,0.30);*/
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+    z-index: 5;
+}
+/*.navbar {
+    height: 64px;
+    padding: 8px 24px;
+}
+.navbar-toggler {
+    border-color: #fafafa;
+}
+.nav-link {
+    color: #fff;
+}*/
+.navbar-container {
+    height: 64px;
+    padding: 0 24px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.nav {
+    padding: 0 36px 0 0;
+}
+.nav-link {
+    font-size: 18px;
+    color: #fff;
 }
 .active, .nav-link:hover {
     color: #fff;
-    opacity: .9;
+    opacity: .8;
 }
+.navbar-brand {
+    margin-right: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.logo-name {
+    padding: 0 12px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fafafa;
+}
+
+
+
 .main-container {
     position: absolute;
     top: 112px;
@@ -88,7 +116,30 @@ header {
     padding: 0;
 }
 .sidebar {
-    height: 300px;
+    height: 700px;
     background-color: #fafafa;
     /*box-shadow: 0px 0 6px rgba(0,0,0,.1);*/
+}
+.vertical-menu {
+    margin: 12px 0;
+}
+.vertical-menu-item {
+    box-sizing: border-box;
+    color: #333;
+    cursor: pointer;
+    display: block;
+    max-width: 260px;
+    overflow-wrap: break-word;
+    padding: 4px 8px;
+    text-decoration: none;
+    text-align: left;
+    width: 93%;
+    word-wrap: break-word;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width : 767px) {
+.no-displayed {
+    display: none;
+}
 }

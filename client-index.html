@@ -23,25 +23,55 @@
         <div class="toolbar-row">
 
             <div class="toolbar-row-item">
-                <span class="title no-displayed">תיקון סמארטפון </span>
-                <span class="title-caption">מגיעים עד אליך</span>
+                <span class="phone-number" title="Call">052-7707494</span>
+                <span class="phone-number-caption no-displayed">לתושבי נתניה והסביבה</span>
             </div>
 
             <div class="toolbar-row-item">
-                <span class="logo-name">'מעבדת שייקביץ</span>
-                <img class="logo" src="./assets/logo-40.png" alt="logo">
+                <span class="title no-displayed">תיקון סמארטפון </span>
+                <span class="title-caption">מגיעים עד אליך</span>
+                <!--<span class="logo-name">'מעבדת שייקביץ</span>
+                <img class="logo" src="./assets/logo-40.png" alt="logo">-->
             </div>
 
         </div>
 
         <div class="top-nav-row">
 
-            <div class="toolbar-row-item">
-                <span class="phone-number">052-7707494</span>
-                <span class="phone-number-caption no-displayed">לתושבי נתניה והסביבה</span>
-            </div>
+            <!--<nav class="navbar navbar-expand-lg flex-row-reverse">
+                <a class="navbar-brand" href="#" title="Home">
+                    <span class="logo-name">'מעבדת שייקביץ</span>
+                    <img src="./assets/logo1.png" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="top-nav-container">
+                <div class="collapse navbar-collapse flex-row" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">מחיר<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">עלינו</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">צור קשר</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">ביקורות</a>
+                        </li>
+                    </ul>
+                    &lt;!&ndash;<form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>&ndash;&gt;
+                </div>
+            </nav>-->
+
+            <nav class="navbar-container">
+
                 <ul class="nav">
                     <li class="nav-item">
                         <a class="nav-link" href="#">ביקורות</a>
@@ -56,7 +86,13 @@
                         <a class="nav-link active" href="#">מחיר</a>
                     </li>
                 </ul>
-            </div>
+
+                <a class="navbar-brand" href="#" title="Home">
+                    <span class="logo-name">'מעבדת שייקביץ</span>
+                    <img src="./assets/logo1.png" alt="logo">
+                </a>
+
+            </nav>
 
         </div>
 
@@ -64,28 +100,40 @@
 
     <main class="row main-container">
 
-        <section class="col-9 content-container">
+        <section class="col-10 content-container">
 
         </section>
 
-        <aside class="col-3 sidebar">
-            <!--<ul class="nav ">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">ביקורות</a>
+        <aside class="col-2 sidebar">
+            <ul class="vertical-menu">
+                <li class="vertical-menu-item dropdown">
+                    <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Apple
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">צור קשר</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">עלינו</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">מחיר</a>
-                </li>
-            </ul>-->
+                <!--<li class="vertical-menu-item">Apple</li>-->
+                <li class="vertical-menu-item">Samsung</li>
+                <li class="vertical-menu-item">Xiaomi</li>
+                <li class="vertical-menu-item">Huawei</li>
+                <li class="vertical-menu-item">LG</li>
+            </ul>
         </aside>
 
     </main>
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+            crossorigin="anonymous"></script>
 </body>
 </html>
