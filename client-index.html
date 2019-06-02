@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
           integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
           crossorigin="anonymous">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link type="text/css" rel="stylesheet" href="./css/client-main.css">
     <link rel="icon" type="image/x-icon" href="shaikevich-favicon.ico">
 </head>
@@ -105,27 +106,59 @@
         </section>
 
         <aside class="col-2 sidebar">
-            <ul class="vertical-menu">
-                <li class="vertical-menu-item dropdown">
-                    <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Apple
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
+
+            <ul id="accordion" class="accordion">
+
+                <li>
+                    <div class="link"><i class="fa fa-code"></i>Apple<i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu">
+                        <li><a href="#">iPhone</a></li>
+                        <li><a href="#">iPad</a></li>
+                    </ul>
                 </li>
-                <!--<li class="vertical-menu-item">Apple</li>-->
-                <li class="vertical-menu-item">Samsung</li>
-                <li class="vertical-menu-item">Xiaomi</li>
-                <li class="vertical-menu-item">Huawei</li>
-                <li class="vertical-menu-item">LG</li>
+
+                <li>
+                    <div class="link"><i class="fa fa-database"></i>Samsung<i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu">
+                        <li><a href="#">Galaxy A</a></li>
+                        <li><a href="#">Galaxy J</a></li>
+                        <li><a href="#">Galaxy S</a></li>
+                        <li><a href="#">Note</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <div class="link"><i class="fa fa-code"></i>Xiaomi<i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu">
+                        <li><a href="#">Mi</a></li>
+                        <li><a href="#">Redmi</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <div class="link"><i class="fa fa-mobile"></i>Huawei<i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu">
+                        <li><a href="#">Pi</a></li>
+                        <li><a href="#">Mate</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <div class="link"><i class="fa fa-globe"></i>LG<i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu">
+                        <li><a href="#">G</a></li>
+                        <li><a href="#">K</a></li>
+                        <li><a href="#">Q</a></li>
+                        <li><a href="#">V</a></li>
+                    </ul>
+                </li>
+
             </ul>
+
         </aside>
 
     </main>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script>
@@ -135,5 +168,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
             integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
             crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="./js/accordion-dropdown-menu.js"></script>
+
 </body>
 </html>

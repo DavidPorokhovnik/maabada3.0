@@ -1,18 +1,24 @@
 @import url(https://fonts.googleapis.com/earlyaccess/opensanshebrew.css);
+
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     text-decoration: none;
 }
 html, body {
     font-family: 'Open Sans Hebrew', serif;
     letter-spacing: 1px;
-    /*width: 100%;
-    height: 100%;*/
 }
-header {
+ul { list-style-type: none; }
 
+a {
+    /*color: #b63b4d;*/
+    text-decoration: none;
 }
+
 .toolbar-row/*, .top-nav-row*/ {
     position: fixed;
     left: 0;
@@ -105,8 +111,10 @@ header {
     color: #fafafa;
 }
 
-
-
+.row {
+    padding: 0;
+    margin: 0;
+}
 .main-container {
     position: absolute;
     top: 112px;
@@ -114,12 +122,88 @@ header {
 }
 .content-container, .sidebar {
     padding: 0;
+    background-color: #fafafa;
 }
 .sidebar {
     height: 700px;
-    background-color: #fafafa;
-    /*box-shadow: 0px 0 6px rgba(0,0,0,.1);*/
+    border-left: 1px solid rgba(0,0,0,.12);
+    box-shadow: -6px 0 6px rgba(0,0,0,.1);
+    z-index: 2;
 }
+
+/* ------- Smooth Accordion Dropdown Menu ------- */
+.accordion {
+    width: 100%;
+    max-width: 360px;
+    margin: 10px auto 20px;
+    /*-webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;*/
+}
+.accordion .link {
+    cursor: pointer;
+    display: block;
+    padding: 8px 12px 8px 36px;
+    color: #4d4d4d;
+    font-size: 16px;
+    font-weight: 500;
+    /*border-bottom: 1px solid #ccc;*/
+    position: relative;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.accordion .link:hover {
+    background-color: #dbdbdb;
+    color: #63a1df;
+}
+.accordion li:last-child .link { border-bottom: 0; }
+.accordion li i {
+    position: absolute;
+    top: 16px;
+    left: 12px;
+    font-size: 18px;
+    color: #595959;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.accordion li i.fa-chevron-down {
+    right: 12px;
+    left: auto;
+    font-size: 16px;
+}
+.accordion li.open .link { color: #2973ad; }
+.accordion li.open i { color: #2973ad; }
+.accordion li.open i.fa-chevron-down {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.submenu {
+    display: none;
+    background-color: #fafafa;
+    font-size: 14px;
+}
+.submenu li { /*border-bottom: 1px solid #4b4a5e;*/ }
+.submenu a {
+    display: block;
+    text-decoration: none;
+    color: #4d4d4d;
+    padding: 6px 8px 6px 42px;
+    -webkit-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+.submenu a:hover {
+    background: #63a1df;
+    color: #fff;
+}
+/* ------- End of Smooth Accordion Dropdown Menu ------- */
+
+/*
 .vertical-menu {
     margin: 12px 0;
 }
@@ -137,6 +221,7 @@ header {
     word-wrap: break-word;
     text-transform: uppercase;
 }
+*/
 
 @media only screen and (max-width : 767px) {
 .no-displayed {
