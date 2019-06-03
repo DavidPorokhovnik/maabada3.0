@@ -123,6 +123,38 @@ a {
     background-color: #fafafa;
 }
 
+.works-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row-reverse wrap;
+    flex-flow: row-reverse wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    align-content: center;
+    margin: 50px auto;
+}
+.work {
+    -webkit-flex: none;
+    -ms-flex:  none;
+    flex:  none;
+    min-width: 180px;
+    min-height: 72px;
+    padding: 8px;
+    margin: 16px;
+    text-align: center;
+    border: 1px solid #4d4d4d;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.work-name, .work-price {
+    margin: 0;
+}
+.work-name {
+    margin-bottom: 6px;
+}
+
 .sidebar {
     height: 700px;
     border-left: 1px solid rgba(0,0,0,.12);
@@ -133,6 +165,7 @@ a {
 .accordion {
     width: 100%;
     max-width: 360px;
+    min-width: 180px;
     margin: 10px auto 20px;
     /*-webkit-border-radius: 4px;
     -moz-border-radius: 4px;
