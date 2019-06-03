@@ -122,7 +122,7 @@ a {
     padding: 0;
     background-color: #fafafa;
 }
-
+/* ------- Works & Prices Tabs ------- */
 .works-container {
     display: -webkit-flex;
     display: flex;
@@ -151,6 +151,7 @@ a {
     box-shadow: 0 2px 2px rgba(10,16,20,.24)/*, 0 0 2px rgba(10,16,20,.12)*/;
     box-sizing: border-box;
     transition: box-shadow .4s;
+    cursor: pointer;
 }
 .work:hover {
     box-shadow: 0 6px 6px rgba(10, 16, 20, .24), 0 0 6px rgba(10, 16, 20, .12);
@@ -173,9 +174,36 @@ a {
     padding: 0 4px;
     font-size: 14px;
 }
+/* ------- End of Works & Prices Tabs ------- */
+/* ------- Order Form ------- */
+.order-form-container {
+    max-width: 848px;
+    margin: 0 auto 72px;
+    box-sizing: border-box;
+    padding: 32px 40px 16px 40px;
+    border: 1px solid #e6e6e6;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    box-shadow: 0 2px 2px rgba(10,16,20,.24);
+}
+.form-control {
+    background-image:
+            linear-gradient(0deg,#63a1df 2px,rgba(0,150,136,0) 0),
+            linear-gradient(0deg,rgba(0,0,0,.26) 1px,transparent 0);
+}
+.btn-raised {
+    background-color: #297bb7 !important;
+    border-color: #297bb7 !important;
+}
+.btn-raised:hover {
+    background-color: #2973ad !important;
+    border-color: #205987 !important;
+}
+/* ------- End of Order Form ------- */
 
 .sidebar {
-    height: 700px;
+    min-height: 100%;
     border-left: 1px solid rgba(0,0,0,.12);
     box-shadow: -6px 0 6px rgba(0,0,0,.1);
     z-index: 2;
@@ -183,6 +211,7 @@ a {
 /* ------- Smooth Accordion Dropdown Menu ------- */
 .accordion {
     width: 100%;
+    min-height: 230px;
     max-width: 360px;
     min-width: 180px;
     margin: 10px auto 20px;
