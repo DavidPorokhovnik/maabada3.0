@@ -41,7 +41,7 @@
         </div>
 
         <div class="top-nav-row">
-
+            <!---------- Alternative Bootstrap Navbar ---------->
             <!--<nav class="navbar navbar-expand-lg flex-row-reverse">
                 <a class="navbar-brand" href="#" title="Home">
                     <span class="logo-name">'מעבדת שייקביץ</span>
@@ -73,7 +73,7 @@
                     </form>&ndash;&gt;
                 </div>
             </nav>-->
-
+            <!---------- End of Alternative Bootstrap Navbar ---------->
             <nav class="navbar-container">
 
                 <ul class="nav">
@@ -151,27 +151,34 @@
 
             </div>
 
-            <div class="order-form-container">
+            <div class="order-form">
+                <p class="order-form-title">הזמנת תיקון</p>
+                <div class="order-form-container">
 
-                <form>
-                    <div class="form-group">
-                        <label for="inputEmail" class="bmd-label-floating">Email address</label>
-                        <input type="email" class="form-control" id="inputEmail">
-                        <span class="bmd-help">We'll never share your email with anyone else.</span>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputTel" class="bmd-label-floating">Telephone</label>
-                        <input type="tel" class="form-control" id="inputTel">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputName" class="bmd-label-floating">Name</label>
-                        <input type="text" class="form-control" id="inputName">
-                        <span class="bmd-help">We'll never share your email with anyone else.</span>
-                    </div>
-                    <button class="btn btn-default">Cancel</button>
-                    <button type="submit" class="btn btn-primary btn-raised">Submit</button>
-                </form>
+                    <form>
+                        <div class="form-group">
+                            <label for="inputEmail" class="input-label bmd-label-floating">Email address</label>
+                            <input type="email" class="form-control  form-control-sm" id="inputEmail"
+                                   aria-describedby="emailHelp" placeholder="Enter email">
+                            <!--<span class="bmd-help">We'll never share your email with anyone else.</span>-->
+                            <!--<small id="emailHelp" class="form-text text-muted">
+                                We'll never share your email with anyone else.
+                            </small>-->
+                        </div>
+                        <div class="form-group">
+                            <label for="inputTel" class="bmd-label-floating">Telephone</label>
+                            <input type="tel" class="form-control form-control-sm" id="inputTel" placeholder="Enter telephone">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputName" class="bmd-label-floating">Name</label>
+                            <input type="text" class="form-control form-control-sm" id="inputName" placeholder="Enter your name">
+                            <span class="bmd-help">We'll never share your email with anyone else.</span>
+                        </div>
+                        <button class="btn btn-default">Cancel</button>
+                        <button type="submit" class="btn btn-primary btn-raised" id="btn">Send</button>
+                    </form>
 
+                </div>
             </div>
 
         </section>
@@ -180,19 +187,19 @@
 
             <ul id="accordion" class="accordion">
 
-                <li>
-                    <div class="link">Apple<i class="fa fa-chevron-down"></i></div>
+                <li id="manufacturers-menu">
+                    <!--<div class="link">Apple<i class="fa fa-chevron-down"></i></div>
                     <ul class="submenu">
                         <li>
                             <a href="#">iPhone</a>
-                            <!--<div class="submenu-link">iPhone<i class="fa fa-chevron-down"></i></div>
+                            &lt;!&ndash;<div class="submenu-link">iPhone<i class="fa fa-chevron-down"></i></div>
                             <ul class="sub-submenu">
                                 <li><a href="#">5</a></li>
                                 <li><a href="#">5C</a></li>
                                 <li><a href="#">5S</a></li>
                                 <li><a href="#">6</a></li>
                                 <li><a href="#">6S</a></li>
-                            </ul>-->
+                            </ul>&ndash;&gt;
                         </li>
                         <li><a href="#">iPad</a></li>
                     </ul>
@@ -231,7 +238,7 @@
                         <li><a href="#">K</a></li>
                         <li><a href="#">Q</a></li>
                         <li><a href="#">V</a></li>
-                    </ul>
+                    </ul>-->
                 </li>
 
             </ul>
@@ -257,7 +264,7 @@
     <!---------- End of Bootstrap js ---------->
 
     <!---------- Bootstrap Material Design js ---------->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
             crossorigin="anonymous"></script>
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
@@ -266,13 +273,54 @@
     <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
             integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
             crossorigin="anonymous"></script>
-    <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+    <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>-->
     <!---------- End of Bootstrap Material Design js ---------->
 
     <!---------- Smooth Accordion Dropdown Menu js ---------->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="./js/accordion-dropdown-menu.js"></script>
     <!---------- End of Smooth Accordion Dropdown Menu js ---------->
+    <!--<script src="./js/sidebar.js"></script>-->
+    <script>
+        function showManufacturers()
+        {
+            $.ajax({
+                method: 'Post',
+                url: 'https://phoneservice.herokuapp.com/getmakes',
+                cache: false,
+                success: function (data) {
+                    let dataArray = $.parseJSON(data);
+                    let output = '';
+                    for (let i = 0; i < dataArray.length; i++) {
+                        output += '<div class="link">' + dataArray[i] + '<i class="fa fa-chevron-down"></i></div>';
+                    }
+                    $('#manufacturers-menu').empty().append(output);
+                }
+            });
+        }
+
+        $(document).ready(function(){
+            showManufacturers();
+        });
+
+        /*$(document).ready(function(){
+
+            $.ajax({
+                method: 'Post',
+                url: 'https://phoneservice.herokuapp.com/getmakes',
+                cache: false,
+                success: function (data) {
+                    let dataArray = $.parseJSON(data);
+                    let output = '';
+                    for (let i = 0; i < dataArray.length; i++) {
+                        output += '<div class="link">' + dataArray[i] + '<i class="fa fa-chevron-down"></i></div>';
+                    }
+                    $('#manufacturers-menu').empty().append(output);
+                }
+            });
+
+        });*/
+    </script>
 
 </body>
 </html>
