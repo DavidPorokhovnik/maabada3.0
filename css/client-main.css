@@ -286,9 +286,9 @@ a {
     text-decoration: none;
     color: #4d4d4d;
     padding: 6px 8px 6px 42px;
-    -webkit-transition: all 0.25s ease;
-    -o-transition: all 0.25s ease;
-    transition: all 0.25s ease;
+    -webkit-transition: all .1s ease;
+    -o-transition: all .1s ease;
+    transition: all .1s ease;
 }
 .submenu a:hover {
     background: #63a1df;

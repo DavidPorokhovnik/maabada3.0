@@ -332,6 +332,8 @@
                                 console.log(output);
                                 console.log($(this));
                                 $(this).next('.submenu').append(output);
+                                $(this).next('.submenu').slideToggle();
+                                $(this).parent().toggleClass('open');
                             }).bind(this),
                             error: function(er) {
                                 console.log(er);
