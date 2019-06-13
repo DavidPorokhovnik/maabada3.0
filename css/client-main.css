@@ -296,6 +296,39 @@ a {
 }
 /* ------- End of Smooth Accordion Dropdown Menu ------- */
 
+footer {
+    position: relative;
+}
+.footer-container {
+    /*position: fixed*/;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    background-color: #00487d;
+    z-index: 6;
+}
+.footer-powered,
+.footer-rights {
+    margin-bottom: 0;
+    line-height: 74px;
+    font-size: 14px;
+}
+.footer-powered {
+    padding-left: 24px;
+    color: #eceff1;
+}
+.footer-rights {
+    padding-right: 24px;
+    text-align: right;
+    color: #fff;
+}
+
 @media only screen and (max-width : 767px) {
 .no-displayed {
     display: none;

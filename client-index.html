@@ -187,8 +187,8 @@
 
             <ul id="accordion" class="accordion">
 
-                <li id="manufacturers-menu">
-                    <!--<div class="link">Apple<i class="fa fa-chevron-down"></i></div>
+                <!--<li>
+                    <div class="link">Apple<i class="fa fa-chevron-down"></i></div>
                     <ul class="submenu">
                         <li>
                             <a href="#">iPhone</a>
@@ -238,8 +238,8 @@
                         <li><a href="#">K</a></li>
                         <li><a href="#">Q</a></li>
                         <li><a href="#">V</a></li>
-                    </ul>-->
-                </li>
+                    </ul>
+                </li>-->
 
             </ul>
 
@@ -248,7 +248,17 @@
     </main>
 
     <footer>
-
+        <div class="footer-container">
+            <div class="">
+                <p class="footer-powered">Powered by DoodieDev</p>
+            </div>
+            <div class="">
+                <p class="footer-rights">
+                    <span> כל הזכויות שמורות לאתר</span>
+                    <span> 2019 &#169;</span>
+                </p>
+            </div>
+        </div>
     </footer>
 
     <!---------- Bootstrap js ---------->
@@ -282,25 +292,73 @@
     <!---------- End of Smooth Accordion Dropdown Menu js ---------->
     <!--<script src="./js/sidebar.js"></script>-->
     <script>
-        function showManufacturers()
+        function showMakers()
         {
             $.ajax({
                 method: 'Post',
                 url: 'https://phoneservice.herokuapp.com/getmakes',
                 cache: false,
-                success: function (data) {
-                    let dataArray = $.parseJSON(data);
+                success: function (response) {
+                    let makersArray = $.parseJSON(response);
                     let output = '';
-                    for (let i = 0; i < dataArray.length; i++) {
-                        output += '<div class="link">' + dataArray[i] + '<i class="fa fa-chevron-down"></i></div>';
+                    for (let i = 0; i < makersArray.length; i++) {
+                        output += '<li><div class="link">' + makersArray[i] +
+                            '<i class="fa fa-chevron-down"></i></div><ul class="submenu"></ul></li>';
                     }
-                    $('#manufacturers-menu').empty().append(output);
+                    $('#accordion').empty().append(output);
                 }
             });
         }
 
+        function showTypes()
+                {
+                    $('#accordion').on('click','.link',function(){
+                        console.log($(this));
+                        let request = $(this).prop('textContent');
+                        console.log(request);
+                        $.ajax({
+                            method: 'Post',
+                            url: 'https://phoneservice.herokuapp.com/gettypes',
+                            data: {'make': request},
+                            success: (function(response) {
+                                console.log(response);
+                                let typesArray = $.parseJSON(response);
+                                let output = '';
+                                for (let i = 0; i < typesArray.length; i++) {
+                                    output += '<li><a href="#">' + typesArray[i] + '</a></li>';
+                                }
+                                console.log(output);
+                                console.log($(this));
+                                $(this).next('.submenu').append(output);
+                            }).bind(this),
+                            error: function(er) {
+                                console.log(er);
+                            }
+                        });
+                    })
+                }
+
         $(document).ready(function(){
-            showManufacturers();
+            showMakers();
+            showTypes();
+            /*$(document).on('click touchstart', '#maker', function(){
+                console.log($(this));
+                let div = $(this);
+                $.ajax({
+                    method: 'Post',
+                    url: 'https://phoneservice.herokuapp.com/gettypes',
+                    /!*dataType: "json",*!/
+                    data: {make: div.innerText},
+                    success: function(data) {
+                        let dataArray = $.parseJSON(data);
+                        let output = '';
+                        for (let i = 0; i < dataArray.length; i++) {
+                            output += '<li>' + dataArray[i] + '</li>';
+                        }
+                        $('#types').empty().append(output);
+                    }
+                });
+            });*/
         });
 
         /*$(document).ready(function(){
@@ -313,9 +371,9 @@
                     let dataArray = $.parseJSON(data);
                     let output = '';
                     for (let i = 0; i < dataArray.length; i++) {
-                        output += '<div class="link">' + dataArray[i] + '<i class="fa fa-chevron-down"></i></div>';
+                        output += '<div class="link" id="maker" >' + dataArray[i] + '<i class="fa fa-chevron-down"></i></div>';
                     }
-                    $('#manufacturers-menu').empty().append(output);
+                    $('#makers-menu').empty().append(output);
                 }
             });
 
