@@ -1,4 +1,4 @@
-//var global_make="";
+var global_maker="";
 
 $(document).ready(function(){
     /*divRowProgress = document.createElement('div');
@@ -46,7 +46,7 @@ function getMakers() {
 function createMakers(makersArray) {
     let output = '';
     for (let i = 0; i < makersArray.length; i++) {
-        output += '<li><div class="link" id="maker-' + makersArray[i] + '" onclick="getTypes(id)">' + makersArray[i] +
+        output += '<li><div class="link" id="' + makersArray[i] + '" onclick="getTypes(id)">' + makersArray[i] +
             '<i class="fa fa-chevron-down"></i></div><ul class="submenu"></ul></li>';
     }
     $('#accordion').empty().append(output);
@@ -60,22 +60,53 @@ function createMakers(makersArray) {
     }*/
 }
 
+function getTypes(maker) {
+    /*container2.innerHTML="";
+    container3.innerHTML="";*/
 
-function mHover(id) {
-    //alert(id);
-    //var itemId = id.split("-")[1];
-    let div = document.getElementById(id);
-    let divTtl = div.getElementsByClassName("item_ttl")[0];
-    divTtl.style.textShadow="gray 1px 1px";
-    divTtl.style.backgroundColor="rgb(17,214,255)";
-    // divTtl.style.fontWeight="bold";
-    // divImg.style.transform = "rotate(7deg)"
+    //var maker = id.split("-")[1];
+    global_maker = maker;
+    //console.log(global_maker);
+    const url='https://phoneservice.herokuapp.com/gettypes';
+
+    request = $.ajax({
+        url: url,
+        type: "post",
+        data: {"make" : global_maker}
+    });
+
+    // Callback handler that will be called on success
+    request.done(function (response, textStatus, jqXHR) {
+        console.log(response);
+        var typesArray = jQuery.parseJSON(response);
+        /*divRowProgress.innerHTML ="<p>There are no orders, but they will be soon.</p>";
+        divRowProgress.remove();*/
+
+        if (typesArray.length > 0) {
+            createTypes(typesArray, maker);
+        }
+    });
+    // Callback handler that will be called on failure
+    request.fail(function (jqXHR, textStatus, errorThrown) {
+        console.error(
+            "The following error occurred: " +
+            textStatus, errorThrown
+        );
+    });
 }
 
-function mUnHover(id) {
-    //var itemId = id.split("-")[1];
-    let div=document.getElementById(id);
-    let divTtl=div.getElementsByClassName("item_ttl")[0];
-    divTtl.style.textShadow="";
-    divTtl.style.backgroundColor="aquamarine";
+function createTypes(typesArray, maker) {
+    let output = '';
+    for (let i = 0; i < typesArray.length; i++) {
+        output += '<li><a href="#">' + typesArray[i] + '</a></li>';
+    }
+    document.getElementById(maker).nextElementSibling.innerHTML = output;
+    /*for (var i=0; i < typesArray.length; i++) {
+        var type = typesArray[i];
+        var div = document.createElement('div');
+        div.className="row";
+        div.innerHTML = "" + "<div id=\"type-" + type + "\" class=\"col-12\" onclick=\"getModels(id)\" " +
+            "onmouseover='mHover(id)' onmouseout='mUnHover(id)'>\n" + "<p class=\"item_ttl\">" + type+"</p>\n" + "";
+        container2.appendChild(div);
+    }*/
 }
