@@ -1,12 +1,16 @@
 
 const MAKERS_URL='https://phoneservice.herokuapp.com/getmakes';
 const TYPES_URL = 'https://phoneservice.herokuapp.com/gettypes';
+const MODELS_URL = 'https://phoneservice.herokuapp.com/getmodels';
+
+let global_maker = '';
 
 $(document).ready(function(){
 
     getMakers();
 
 });
+
 
 function getMakers() {
 
@@ -34,7 +38,6 @@ function getMakers() {
     });
 }
 
-
 function createMakers(makersArray) {
     let output = '';
     for (let i = 0; i < makersArray.length; i++) {
@@ -43,6 +46,7 @@ function createMakers(makersArray) {
     }
     $('#accordion').empty().append(output);
 }
+
 
 function getTypes(maker) {
 
@@ -70,12 +74,52 @@ function getTypes(maker) {
 }
 
 function createTypes(typesArray, maker) {
+    global_maker = maker; //!?
+
     let output = '';
     for (let i = 0; i < typesArray.length; i++) {
-        output += '<li><a href="#">' + typesArray[i] + '</a></li>';
+        output += '<li><div id="' + typesArray[i] + '" onclick="getModels(id)">' + typesArray[i] +
+            '</div><ul class="submenu"></ul></li></li>';
     }
     let $this = document.getElementById(maker);
     let $next = document.getElementById(maker).nextElementSibling;
+    $next.innerHTML = output;
+    $($next).slideToggle();
+    $($this).parent().toggleClass('open');
+}
+
+
+function getModels(type) {
+
+    request = $.ajax({
+        url: MODELS_URL,
+        type: "Post",
+        data: {"make" : global_maker, "type": type}
+    });
+
+    request.done(function (response, textStatus, jqXHR) {
+        console.log(response);
+        var modelsArray = jQuery.parseJSON(response);
+
+        if (modelsArray.length > 0) {
+            createModels(modelsArray, type);
+        }
+    });
+    request.fail(function (jqXHR, textStatus, errorThrown) {
+        console.error(
+            "The following error occurred: " +
+            textStatus, errorThrown
+        );
+    });
+}
+
+function createModels(modelsArray, type) {
+    let output = '';
+    for (let i = 0; i < modelsArray.length; i++) {
+        output += '<li><div id="' + modelsArray[i] + '">' + modelsArray[i] + '</div></li>';
+    }
+    let $this = document.getElementById(type);
+    let $next = document.getElementById(type).nextElementSibling;
     $next.innerHTML = output;
     $($next).slideToggle();
     $($this).parent().toggleClass('open');

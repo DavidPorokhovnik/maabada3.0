@@ -281,7 +281,7 @@ a {
     font-size: 14px;
 }
 .submenu li { /*border-bottom: 1px solid #4b4a5e;*/ }
-.submenu a {
+.submenu div {
     display: block;
     text-decoration: none;
     color: #4d4d4d;
@@ -290,7 +290,7 @@ a {
     -o-transition: all .1s ease;
     transition: all .1s ease;
 }
-.submenu a:hover {
+.submenu div:hover {
     background: #63a1df;
     color: #fff;
 }
