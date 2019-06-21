@@ -198,6 +198,21 @@ a {
     border-radius: 4px;
     box-shadow: 0 2px 2px rgba(10,16,20,.24);
 }
+.form-works-container {
+
+}
+.form-works-title, .work-field {
+    text-align: right;
+}
+.form-group {
+    display: flex;
+    flex-direction: column-reverse;
+    direction: rtl;
+}
+.input-label {
+    text-align: right;
+}
+/*work only with next element*/
 .form-control:focus ~ .input-label {
     color: #297bb7;
 }
@@ -206,7 +221,12 @@ a {
             linear-gradient(0deg,#63a1df 2px,rgba(0,150,136,0) 0),
             linear-gradient(0deg,rgba(0,0,0,.26) 1px,transparent 0);
 }
+.form-btn-container {
+    display: flex;
+    flex-direction: row-reverse;
+}
 .btn-raised {
+    margin-left: 16px;
     background-color: #297bb7 !important;
     border-color: #297bb7 !important;
 }
@@ -289,6 +309,7 @@ a {
     -webkit-transition: all .1s ease;
     -o-transition: all .1s ease;
     transition: all .1s ease;
+    cursor: pointer;
 }
 .submenu div:hover {
     background: #63a1df;

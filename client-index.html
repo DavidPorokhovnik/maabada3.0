@@ -110,43 +110,43 @@
 
                 <div class="work">
                     <p class="work-name">החלפת מסך</p>
-                    <p class="work-price"><i class="fa fa-shekel"></i></p>
+                    <p class="work-price"><span></span><i class="fa fa-shekel"></i></p>
                 </div>
                 <div class="work">
                     <p class="work-name">החלפת סלולה</p>
-                    <p class="work-price"><i class="fa fa-shekel"></i></p>
+                    <p class="work-price"><span></span><i class="fa fa-shekel"></i></p>
                 </div>
                 <div class="work">
                     <p class="work-name">החלפת מצלמה קדמית</p>
-                    <p class="work-price"><i class="fa fa-shekel"></i></p>
+                    <p class="work-price"><span></span><i class="fa fa-shekel"></i></p>
                 </div>
                 <div class="work">
                     <p class="work-name">החלפת מצלמה אחורית</p>
-                    <p class="work-price"><i class="fa fa-shekel"></i></p>
+                    <p class="work-price"><span></span><i class="fa fa-shekel"></i></p>
                 </div>
                 <div class="work">
                     <p class="work-name">החלפת שקע טעינה</p>
-                    <p class="work-price"><i class="fa fa-shekel"></i></p>
+                    <p class="work-price"><span></span><i class="fa fa-shekel"></i></p>
                 </div>
                 <div class="work">
                     <p class="work-name">החלפת גב אחורי</p>
-                    <p class="work-price"><i class="fa fa-shekel"></i></p>
+                    <p class="work-price"><span></span><i class="fa fa-shekel"></i></p>
                 </div>
                 <div class="work">
                     <p class="work-name">החלפת רמקול</p>
-                    <p class="work-price"><i class="fa fa-shekel"></i></p>
+                    <p class="work-price"><span></span><i class="fa fa-shekel"></i></p>
                 </div>
                 <div class="work">
                     <p class="work-name">החלפת כפתור  בית</p>
-                    <p class="work-price"><i class="fa fa-shekel"></i></p>
+                    <p class="work-price"><span></span><i class="fa fa-shekel"></i></p>
                 </div>
                 <div class="work">
                     <p class="work-name">החלפת אוזניית שמע</p>
-                    <p class="work-price"><i class="fa fa-shekel"></i></p>
+                    <p class="work-price"><span></span><i class="fa fa-shekel"></i></p>
                 </div>
                 <div class="work">
                     <p class="work-name">טיפול בכורוזיה</p>
-                    <p class="work-price"><i class="fa fa-shekel"></i></p>
+                    <p class="work-price"><span></span><i class="fa fa-shekel"></i></p>
                 </div>
 
             </div>
@@ -156,26 +156,32 @@
                 <div class="order-form-container">
 
                     <form>
+                        <div class="form-group form-works-container">
+                            <!--<input type="text" class="form-control form-control-sm work-field" placeholder="1.">-->
+                            <p class="work-field">1. </p>
+                            <p class="form-works-title">הקליקו על התיקונים הנדרשים על מנת להכניסם לטופס.</p>
+                        </div>
                         <div class="form-group">
-                            <label for="inputEmail" class="input-label bmd-label-floating">Email address</label>
                             <input type="email" class="form-control  form-control-sm" id="inputEmail"
-                                   aria-describedby="emailHelp" placeholder="Enter email">
+                                   aria-describedby="emailHelp" placeholder="הקלד דוא''ל">
+                            <label for="inputEmail" class="bmd-label-floating input-label">כתובת דוא"ל</label>
                             <!--<span class="bmd-help">We'll never share your email with anyone else.</span>-->
                             <!--<small id="emailHelp" class="form-text text-muted">
                                 We'll never share your email with anyone else.
                             </small>-->
                         </div>
                         <div class="form-group">
-                            <label for="inputTel" class="bmd-label-floating">Telephone</label>
-                            <input type="tel" class="form-control form-control-sm" id="inputTel" placeholder="Enter telephone">
+                            <input type="tel" class="form-control form-control-sm" id="inputTel" placeholder="הקלד טלפון">
+                            <label for="inputTel" class="bmd-label-floating input-label">טלפון</label>
                         </div>
                         <div class="form-group">
-                            <label for="inputName" class="bmd-label-floating">Name</label>
-                            <input type="text" class="form-control form-control-sm" id="inputName" placeholder="Enter your name">
-                            <span class="bmd-help">We'll never share your email with anyone else.</span>
+                            <input type="text" class="form-control form-control-sm" id="inputName" placeholder="הקלד את שמך">
+                            <label for="inputName" class="bmd-label-floating input-label">שם</label>
                         </div>
-                        <button class="btn btn-default">Cancel</button>
-                        <button type="submit" class="btn btn-primary btn-raised" id="btn">Send</button>
+                        <div class="form-btn-container">
+                            <button type="submit" class="btn btn-primary btn-raised" id="btn">לשלוח</button>
+                            <button class="btn btn-default">בטל</button>
+                        </div>
                     </form>
 
                 </div>
@@ -293,6 +299,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./js/accordion-dropdown-menu.js"></script>
     <script src="./js/sidebar.js"></script>
+    <script src="./js/send.js"></script>
     <!--script>
         function showMakers()
         {

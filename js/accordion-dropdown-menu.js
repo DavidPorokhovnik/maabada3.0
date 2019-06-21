@@ -7,7 +7,7 @@ $(function() {
         var links = this.el.find('.link');
         // Event
         links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
-    }
+    };
 
     Accordion.prototype.dropdown = function(e) {
         var $el = e.data.el;
@@ -19,8 +19,8 @@ $(function() {
 
         if (!e.data.multiple) {
             $el.find('.submenu').not($next).slideUp().parent().removeClass('open');
-        };
-    }
+        }
+    };
 
     var accordion = new Accordion($('#accordion'), false);
 });
