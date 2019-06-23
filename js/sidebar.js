@@ -4,7 +4,8 @@ const TYPES_URL = 'https://phoneservice.herokuapp.com/gettypes';
 const MODELS_URL = 'https://phoneservice.herokuapp.com/getmodels';
 const MODEL_URL = 'https://phoneservice.herokuapp.com/getmodel';
 
-let global_maker = '';
+//let global_maker = '';
+//let model_id="";
 
 $(document).ready(function(){
 
@@ -74,7 +75,7 @@ function getTypes(maker) {
 }
 
 function createTypes(typesArray, maker) {
-    global_maker = maker; //!?
+    //global_maker = maker; //!?
 
     let output = '';
     for (let i = 0; i < typesArray.length; i++) {
@@ -94,9 +95,11 @@ function createTypes(typesArray, maker) {
 
 
 function getModels(type) {
+
     let makerNode = document.getElementById(type).parentElement.parentElement.previousSibling.textContent;
     let maker = makerNode.split('<')[0];
     console.log(maker);
+
     request = $.ajax({
         url: MODELS_URL,
         type: "Post",
@@ -108,7 +111,7 @@ function getModels(type) {
         var modelsArray = jQuery.parseJSON(response);
 
         if (modelsArray.length > 0) {
-            createModels(modelsArray, type);
+            createModels(modelsArray, type, maker);
         }
     });
     request.fail(function (jqXHR, textStatus, errorThrown) {
@@ -118,10 +121,10 @@ function getModels(type) {
     });
 }
 
-function createModels(modelsArray, type) {
+function createModels(modelsArray, type, maker) {
     let output = '';
     for (let i = 0; i < modelsArray.length; i++) {
-        output += '<li><div id="' + modelsArray[i] + '" onclick="getPrices(id)">' + modelsArray[i] + '</div></li>';
+        output += '<li><div id="' + modelsArray[i] + '-' + maker + '" onclick="getPrices(id)">' + modelsArray[i] + '</div></li>';
     }
     let $this = document.getElementById(type);
     let $next = document.getElementById(type).nextElementSibling;
@@ -133,23 +136,31 @@ function createModels(modelsArray, type) {
 
 function getPrices(name) {
 
+    let model = name.split('-')[0];
+    let maker = name.split('-')[1];
+
     request = $.ajax({
         url: MODEL_URL,
         type: "Post",
-        data:{"name" : name, "make": global_maker}
+        data:{"name" : model, "make": maker}
     });
 
     request.done(function (response, textStatus, jqXHR){
-        console.log(response);
+        //console.log(response);
         let modelObj = jQuery.parseJSON(response);
         console.log(modelObj);
+        let id = modelObj[0]._id;
+        console.log(id);
+        //model_id=id;
+        let model = modelObj[0].name;
+        console.log(model);
         let worksArray = modelObj[0].works;
-        console.log(worksArray);
+        //console.log(worksArray);
         let pricesArray = JSON.parse(worksArray);
         if (pricesArray.length > 0) {
             /*let pricesArray = worksArray[0].works;
             console.log(pricesArray);*/
-            createPrices(pricesArray);
+            createPrices(pricesArray, id);
         }
     });
     request.fail(function (jqXHR, textStatus, errorThrown) {
@@ -159,8 +170,10 @@ function getPrices(name) {
     });
 }
 
-function createPrices(pricesArray) {
+function createPrices(pricesArray, id) {
+    let priceParagraphArr = document.getElementsByClassName('work-price');
     for(var i = 0; i < pricesArray.length; i++) {
-        document.getElementsByClassName('work-price')[i].firstElementChild.innerText = pricesArray[i];
+        priceParagraphArr[i].id = id;
+        priceParagraphArr[i].firstElementChild.innerText = pricesArray[i];
     }
 }
