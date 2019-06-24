@@ -80,7 +80,7 @@ function createTypes(typesArray, maker) {
     let output = '';
     for (let i = 0; i < typesArray.length; i++) {
         output += '<li><div id="' + typesArray[i] + '" onclick="getModels(id)">' + typesArray[i] +
-            '</div><ul class="submenu"></ul></li></li>';
+            '</div><ul class="sub-submenu"></ul></li></li>';
     }
     console.log(output);
     let $this = document.getElementById(maker);

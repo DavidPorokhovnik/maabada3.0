@@ -214,7 +214,7 @@ header {
     flex-direction: column-reverse;
     direction: rtl;
 }
-.input-label {
+.input-label, .form-text {
     text-align: right;
 }
 /*work only with next element*/
@@ -261,7 +261,7 @@ header {
 .accordion .link {
     cursor: pointer;
     display: block;
-    padding: 8px 12px 8px 36px;
+    padding: 8px 20px 8px 28px;
     color: #4d4d4d;
     font-size: 16px;
     font-weight: 500;
@@ -300,17 +300,17 @@ header {
     transform: rotate(180deg);
 }
 
-.submenu {
+.submenu,.sub-submenu {
     display: none;
     background-color: #fafafa;
     font-size: 14px;
 }
 .submenu li { /*border-bottom: 1px solid #4b4a5e;*/ }
-.submenu div {
+.submenu div, .sub-submenu div {
     display: block;
     text-decoration: none;
     color: #4d4d4d;
-    padding: 6px 8px 6px 42px;
+    padding: 6px 16px 6px 36px;
     -webkit-transition: all .1s ease;
     -o-transition: all .1s ease;
     transition: all .1s ease;
@@ -318,6 +318,13 @@ header {
 }
 .submenu div:hover {
     background: #63a1df;
+    color: #fff;
+}
+.sub-submenu div {
+    padding: 6px 8px 6px 42px;
+}
+.sub-submenu div:hover {
+    background: #2973ad;
     color: #fff;
 }
 /* ------- End of Smooth Accordion Dropdown Menu ------- */
