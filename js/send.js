@@ -1,5 +1,5 @@
 // adding works to the order form
-// cancel
+// canceling an order
 // sending an order to server
 
 const ADDORDER_URL = 'https://phoneservice.herokuapp.com/orderadd'
@@ -9,6 +9,7 @@ $(document).ready(function(){
     let worksCounter = 0;
     // id of model in the order
     let id = '';
+    // numbers of works sending with the data params
     let worksArray = [];
 
     $(document).on('click', '.work', function () {

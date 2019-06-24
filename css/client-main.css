@@ -1,5 +1,7 @@
+/*--------------------- Fonts ---------------------*/
 @import url("https://fonts.googleapis.com/earlyaccess/opensanshebrew.css");
 @import url("https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css");
+/*--------------------- normalize ---------------------*/
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +11,7 @@
     text-decoration: none;
 }
 html, body {
+    height: 100%;
     font-family: 'Open Sans Hebrew', serif;
     letter-spacing: 1px;
 }
@@ -17,7 +20,10 @@ ul { list-style-type: none; }
 a {
     text-decoration: none;
 }
+/*--------------------- header ---------------------*/
+header {
 
+}
 .toolbar-row {
     position: fixed;
     left: 0;
@@ -188,8 +194,7 @@ a {
 }
 /* ------- Order Form ------- */
 .order-form-container {
-    /*max-width: 848px;
-    margin: 0 auto 72px;*/
+    /*margin: 0 auto 72px;*/
     box-sizing: border-box;
     padding: 32px 40px 16px 40px;
     border: 1px solid #e6e6e6;
@@ -318,21 +323,24 @@ a {
 /* ------- End of Smooth Accordion Dropdown Menu ------- */
 
 footer {
+    z-index: 10;
+    width: 100%;
     position: relative;
+    bottom: 0;
+    left: 0;
 }
 .footer-container {
-    /*position: fixed*/;
-    bottom: 0;
     width: 100%;
-    height: 80px;
+    height: 144px;
     display: -webkit-flex;
     display: flex;
     -webkit-flex-flow: row wrap;
     flex-flow: row wrap;
     -webkit-justify-content: space-between;
     justify-content: space-between;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
     background-color: #00487d;
-    z-index: 6;
 }
 .footer-powered,
 .footer-rights {
@@ -343,6 +351,7 @@ footer {
 .footer-powered {
     padding-left: 24px;
     color: #eceff1;
+    opacity: .8;
 }
 .footer-rights {
     padding-right: 24px;
