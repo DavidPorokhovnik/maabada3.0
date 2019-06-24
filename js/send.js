@@ -31,7 +31,11 @@ $(document).ready(function(){
         }
         else {
             console.log("get previous model!");
-            alert("get previous model!");
+            /*alert("get previous model!");*/
+            document.getElementById('alert-paragraph').innerHTML = 'בחר את המודל הקודם';
+            setTimeout(function(){
+                document.getElementById('alert-paragraph').innerHTML = '';
+            },3000);
         }
     });
 
