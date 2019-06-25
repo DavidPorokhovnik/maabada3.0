@@ -30,11 +30,15 @@ $(document).ready(function(){
             $('.order-works').append(workParagraph);
         }
         else {
-            console.log("get previous model!");
-            /*alert("get previous model!");*/
-            document.getElementById('alert-paragraph').innerHTML = 'בחר את המודל הקודם';
-            setTimeout(function(){
-                document.getElementById('alert-paragraph').innerHTML = '';
+            //console.log("get previous model!");
+            //alert("get previous model!");
+            document.getElementById('dialog-paragraph')
+                .setAttribute('class', 'message-paragraph');
+            document.getElementById('dialog-paragraph').innerHTML = 'בחר את המודל הקודם';
+            setTimeout(function() {
+                document.getElementById('dialog-paragraph').innerHTML = '';
+                document.getElementById('dialog-paragraph')
+                    .setAttribute('class', 'dialog-paragraph');
             },3000);
         }
     });

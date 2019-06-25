@@ -55,7 +55,7 @@ function getTypes(maker) {
     request = $.ajax({
         url: TYPES_URL,
         type: "Post",
-        data: {"make" : maker}
+        data: {"make": maker}
     });
 
     // Callback handler that will be called on success
@@ -103,7 +103,7 @@ function getModels(type) {
     request = $.ajax({
         url: MODELS_URL,
         type: "Post",
-        data: {"make" : maker, "type": type}
+        data: {"make": maker, "type": type}
     });
 
     request.done(function (response, textStatus, jqXHR) {
@@ -124,7 +124,8 @@ function getModels(type) {
 function createModels(modelsArray, type, maker) {
     let output = '';
     for (let i = 0; i < modelsArray.length; i++) {
-        output += '<li><div id="' + modelsArray[i] + '-' + maker + '" onclick="getPrices(id)">' + modelsArray[i] + '</div></li>';
+        output += '<li><div id="' + modelsArray[i] + '-' + maker + '" onclick="getPrices(id); ' +
+            '/*$(this).css({\'color\': \'#2973ad\'});*/">' + modelsArray[i] + '</div></li>';
     }
     let $this = document.getElementById(type);
     let $next = document.getElementById(type).nextElementSibling;
@@ -142,7 +143,7 @@ function getPrices(name) {
     request = $.ajax({
         url: MODEL_URL,
         type: "Post",
-        data:{"name" : model, "make": maker}
+        data:{"name": model, "make": maker}
     });
 
     request.done(function (response, textStatus, jqXHR){
@@ -176,4 +177,6 @@ function createPrices(pricesArray, id) {
         priceParagraphArr[i].id = id;
         priceParagraphArr[i].firstElementChild.innerText = pricesArray[i];
     }
+    document.getElementById('dialog-paragraph').innerHTML =
+        'בחר את העבודות הדרושות כדי להוסיף אותם להזמנת תיקון שלמטה';
 }
