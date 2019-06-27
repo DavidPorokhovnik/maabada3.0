@@ -45,6 +45,7 @@ $(document).ready(function(){
     });
 
     $('.btn-cancel').click(function () {
+        $('.fixing-model').text(' ');
         $('.order-works').children().remove();
         let numberParagraph = '<p class="number">1. </p>';
         $('.order-works').append(numberParagraph);
