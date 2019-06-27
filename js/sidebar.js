@@ -183,5 +183,8 @@ function createPrices(pricesArray, id, maker, type, model) {
     }
     document.getElementById('dialog-paragraph').innerHTML =
         'בחר את העבודות הדרושות כדי להוסיף אותם להזמנת תיקון שלמטה';
-    document.getElementById('fixing-model').innerHTML = maker + ' ' + type + ' ' + model;
+    console.log(document.getElementsByClassName('work-field').length);
+    if (document.getElementsByClassName('work-field').length === 0) {
+        document.getElementById('fixing-model').innerHTML = maker + ' ' + type + ' ' + model +' ';
+    }
 }

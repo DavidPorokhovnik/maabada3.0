@@ -250,6 +250,12 @@ header {
 }
 .fixing-model {
     font-size: 18px;
+    font-weight: 600;
+    color: #595959;
+    direction: ltr;
+}
+.fixing-model-title {
+
 }
 /*work only with next element*/
 .form-control:focus ~ .input-label {

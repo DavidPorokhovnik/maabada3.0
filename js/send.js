@@ -34,12 +34,13 @@ $(document).ready(function(){
             //alert("get previous model!");
             document.getElementById('dialog-paragraph')
                 .setAttribute('class', 'message-paragraph');
-            document.getElementById('dialog-paragraph').innerHTML = 'בחר את המודל הקודם';
+            document.getElementById('dialog-paragraph').innerHTML =
+                'בחר את המודל המצויין בתוך ההזמנה או בטל את ההזמנה';
             setTimeout(function() {
                 document.getElementById('dialog-paragraph').innerHTML = '';
                 document.getElementById('dialog-paragraph')
                     .setAttribute('class', 'dialog-paragraph');
-            },3000);
+            },5000);
         }
     });
 
