@@ -153,6 +153,10 @@ function getPrices(name) {
         let id = modelObj[0]._id;
         console.log(id);
         //model_id=id;
+        let maker = modelObj[0].make;
+        console.log(maker);
+        let type = modelObj[0].type;
+        console.log(type);
         let model = modelObj[0].name;
         console.log(model);
         let worksArray = modelObj[0].works;
@@ -161,7 +165,7 @@ function getPrices(name) {
         if (pricesArray.length > 0) {
             /*let pricesArray = worksArray[0].works;
             console.log(pricesArray);*/
-            createPrices(pricesArray, id);
+            createPrices(pricesArray, id, maker, type, model);
         }
     });
     request.fail(function (jqXHR, textStatus, errorThrown) {
@@ -171,7 +175,7 @@ function getPrices(name) {
     });
 }
 
-function createPrices(pricesArray, id) {
+function createPrices(pricesArray, id, maker, type, model) {
     let priceParagraphArr = document.getElementsByClassName('work-price');
     for(var i = 0; i < pricesArray.length; i++) {
         priceParagraphArr[i].id = id;
@@ -179,4 +183,5 @@ function createPrices(pricesArray, id) {
     }
     document.getElementById('dialog-paragraph').innerHTML =
         'בחר את העבודות הדרושות כדי להוסיף אותם להזמנת תיקון שלמטה';
+    document.getElementById('fixing-model').innerHTML = maker + ' ' + type + ' ' + model;
 }
