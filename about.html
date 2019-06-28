@@ -53,10 +53,10 @@
                     <a class="nav-link" href="#">צור קשר</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">עלינו</a>
+                    <a class="nav-link active" href="about.html">עלינו</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">מחיר</a>
+                    <a class="nav-link" href="client-index.html">מחיר</a>
                 </li>
             </ul>
 
@@ -75,6 +75,40 @@
 
     <div class="col-6 about-left-side-content">
 
+        <div class="about-slider-container">
+
+            <img src="./assets/04.jpg" alt="" class="img-fluid slider-shot slider-shot-4">
+            <img src="./assets/03.jpg" alt="" class="img-fluid slider-shot slider-shot-3">
+            <img src="./assets/02.jpg" alt="" class="img-fluid slider-shot slider-shot-2">
+            <img src="./assets/01.jpg" alt="" class="img-fluid slider-shot slider-shot-1">
+            <img src="./assets/04.jpg" alt="" class="img-fluid slider-shot slider-shot-4-1">
+
+        </div>
+
+        <!--<div class="row">
+          <div class="col-6">
+            <img class="img-fluid about-img-row-1" src="../../assets/02.jpg" alt="">
+            <p class="about-img-caption">מעבדת סלולר</p>
+          </div>
+          <div class="col-6">
+            <img class="img-fluid about-img-row-1" src="../../assets/01.jpg" alt="">
+            <p class="about-img-caption">תיקון מסך, שקע טעינה, סוללה ועוד</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <img class="img-fluid about-img-row-2" src="../../assets/04.jpg" alt="">
+            <p class="about-img-caption">טכנאים מוסמכים</p>
+          </div>
+          <div class="col-6">
+            <img class="img-fluid about-img-row-2" src="../../assets/03.jpg" alt="">
+            <p class="about-img-caption">מכירת טלפונים ואביזרי קצה</p>
+          </div>
+        </div>-->
+    </div>
+
+    <div class="col-6 about-right-side-content">
+
         <h3 class="about-headline">?נשבר המסך? המכשיר אינו מטעין</h3>
 
         <p class="about-text">זה לא משנה אם צריך להחליף מסך לטאבלט או לסמארטפון, גם אם יש לך את
@@ -82,10 +116,10 @@
             ולתקן את הבעיה במקום. צור קשר כעת להצעת מחיר</p>
 
         <div class="about-dropdown">
-            <h6 class="dropdown-1-headline" (click)="toggle1()">? איזה שירותי תיקונים אנחנו מבצעים</h6>
+            <h6 class="dropdown-1-headline"">? איזה שירותי תיקונים אנחנו מבצעים</h6>
         </div>
 
-        <div [@openClose]="isOpen1 ? 'open' : 'closed'" class="row open-close-container-1">
+        <div class="row open-close-container-1">
             <!--<p class="dropdown-1-text">{{ isOpen ? '' : '' }}</p>-->
             <div class="col-6">
                 <ul class="dropdown-1-text">
@@ -112,11 +146,11 @@
         </div>
 
         <div class="about-dropdown">
-            <h6 class="dropdown-2-headline" (click)="toggle2()">אזורי השירות נתניה והסביבה</h6>
+            <h6 class="dropdown-2-headline">אזורי השירות נתניה והסביבה</h6>
         </div>
 
-        <div [@openClose]="isOpen2 ? 'open' : 'closed'" class="row open-close-container-2">
-            <!--<p class="dropdown-1-text">{{ isOpen ? '' : '' }}</p>-->
+        <div class="row open-close-container-2">
+
             <div class="dropdown-2-text">
                 <p>מעבדת שייקביץ' מעניקה שירות מעבדה סוללרית עד אלייך בכל נתניה והסביבה כולל ישובי עמק חפר,
                     כפר יונה, בית חירות, חופית, בית ינאי, מכמורת, ביתן אהרון, חבצלת השרון ועוד, ישובים נוספים בתיאום מראש, לבירורים צרו קשר עכשיו.</p>
@@ -125,51 +159,17 @@
         </div>
 
         <div class="about-dropdown">
-            <h6 class="dropdown-3-headline" (click)="toggle3()">מעבדה מקצועית עם הסמכה ואחריות</h6>
+            <h6 class="dropdown-3-headline">מעבדה מקצועית עם הסמכה ואחריות</h6>
         </div>
 
-        <div [@openClose]="isOpen3 ? 'open' : 'closed'" class="row open-close-container-3">
-            <!--<p class="dropdown-1-text">{{ isOpen ? '' : '' }}</p>-->
+        <div class="row open-close-container-3">
+
             <div class="dropdown-3-text">
                 <p>בזכות ניסיון ומידע מקצועי אנחנו יודעים לתת פתרון מקיף לכל סוגי התקלות,
                     המעבדה שלנו והטכנאים שבה מוסמכים ולצד לימודים תאורטיים ומעבדה מעשית עברו בהצלחה את מבחני ההסכמה הגבוהיים ביותר בשוק.</p>
             </div>
 
         </div>
-    </div>
-
-    <div class="col-6 about-right-side-content">
-
-        <div class="about-slider-container">
-
-            <img src="../../assets/04.jpg" alt="" class="img-fluid slider-shot slider-shot-4">
-            <img src="../../assets/03.jpg" alt="" class="img-fluid slider-shot slider-shot-3">
-            <img src="../../assets/02.jpg" alt="" class="img-fluid slider-shot slider-shot-2">
-            <img src="../../assets/01.jpg" alt="" class="img-fluid slider-shot slider-shot-1">
-            <img src="../../assets/04.jpg" alt="" class="img-fluid slider-shot slider-shot-4-1">
-
-        </div>
-
-        <!--<div class="row">
-          <div class="col-6">
-            <img class="img-fluid about-img-row-1" src="../../assets/02.jpg" alt="">
-            <p class="about-img-caption">מעבדת סלולר</p>
-          </div>
-          <div class="col-6">
-            <img class="img-fluid about-img-row-1" src="../../assets/01.jpg" alt="">
-            <p class="about-img-caption">תיקון מסך, שקע טעינה, סוללה ועוד</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-6">
-            <img class="img-fluid about-img-row-2" src="../../assets/04.jpg" alt="">
-            <p class="about-img-caption">טכנאים מוסמכים</p>
-          </div>
-          <div class="col-6">
-            <img class="img-fluid about-img-row-2" src="../../assets/03.jpg" alt="">
-            <p class="about-img-caption">מכירת טלפונים ואביזרי קצה</p>
-          </div>
-        </div>-->
     </div>
 
     <footer>
