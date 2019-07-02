@@ -15,7 +15,7 @@ $(document).ready(function(){
     $(document).on('click', '.work', function () {
         console.log($(this)); //$(this) is object
         let thisId = $(this)[0].lastElementChild.id; //children('.work-price')
-        if (id === '' || id === thisId) {
+        if ((id === '' || id === thisId) && $('#fixing-model')[0].innerHTML !== '') {
             id = thisId; //?
             worksCounter++;
             if (worksCounter == 1) {
@@ -29,13 +29,25 @@ $(document).ready(function(){
             let workParagraph = '<p class="work-field">'+ worksCounter + '. ' + workName + '</p>';
             $('.order-works').append(workParagraph);
         }
-        else {
+        //console.log($('#fixing-model')[0].innerHTML);
+        if ($('#fixing-model')[0].innerHTML === '') {
+            console.log($('#dialog-paragraph'));
+            $('#dialog-paragraph')[0].className = 'message-paragraph';
+            /*document.getElementById('dialog-paragraph')
+                .setAttribute('class', 'message-paragraph');*/
+            setTimeout(function() {
+                $('#dialog-paragraph')[0].className = 'dialog-paragraph';
+                /*document.getElementById('dialog-paragraph')
+                    .setAttribute('class', 'dialog-paragraph');*/
+            },3000);
+        }
+        if (id !== thisId && $('#fixing-model')[0].innerHTML !== '') {
             //console.log("get previous model!");
             //alert("get previous model!");
             document.getElementById('dialog-paragraph')
-                .setAttribute('class', 'message-paragraph');
+                .setAttribute('class', 'alert-paragraph');
             document.getElementById('dialog-paragraph').innerHTML =
-                'בחר את המודל המצויין בתוך ההזמנה או בטל את ההזמנה';
+                'בחר את הדגם המצויין בתוך ההזמנה או בטל את ההזמנה';
             setTimeout(function() {
                 document.getElementById('dialog-paragraph').innerHTML = '';
                 document.getElementById('dialog-paragraph')

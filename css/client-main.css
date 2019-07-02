@@ -141,7 +141,7 @@ header {
     flex-flow: column nowrap;
     align-items: baseline;*/
 }
-.dialog-paragraph, .message-paragraph {
+.dialog-paragraph, .message-paragraph, .alert-paragraph {
     width: 100%;
     height: 20px;
     margin: 20px auto 0;
@@ -150,6 +150,12 @@ header {
     color: #4d4d4d;
 }
 .message-paragraph {
+    font-weight: 500;
+    font-size: 17px;
+    color: #2973ad;
+    opacity: .85;
+}
+.alert-paragraph {
     font-weight: 600;
     color: #f44336;
 }
