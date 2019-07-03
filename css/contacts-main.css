@@ -1,29 +1,21 @@
-.about-main-container {
+.contacts-main-container {
     position: absolute;
     top: 112px;
     width: 100%;
     margin: 20px auto 0;
 }
-.about-content {
+.contacts-content {
     display: block;
     height: 300px;
 }
-.about-left-side-content,
-.about-right-side-content {
+.contacts-left-side-content,
+.contacts-right-side-content {
     min-height: 360px;
     padding: 0 24px 72px;
 
 }
 
-/*.about-img-row-1 {
-    margin-top: 30px;
-}
-.about-img-caption {
-    margin: 5px 0 20px;
-    text-align: right;
-    font-weight: bold;
-}*/
-.about-slider-container {
+.contacts-slider-container {
     position: relative;
     padding-top: 6px;
 }
@@ -33,7 +25,6 @@
     height: auto;
     animation-duration: 24s;
     animation-iteration-count: infinite;
-
 }
 .slider-shot-1 {
     animation-name: logo-line-shot-1-opacity;
@@ -82,72 +73,20 @@
     to {opacity: 0;}
 }
 
-.about-headline {
+.contacts-headline {
     text-align: center;
     font-weight: 600;
     margin-bottom: 20px;
 }
-.about-text {
+.contacts-text {
     text-align: center;
     margin-bottom: 40px;
-}
-.dropdown-1-headline,
-.dropdown-2-headline,
-.dropdown-3-headline {
-    padding: 10px;
-    margin-bottom: 0;
-    text-align: right;
-    font-weight: 600;
-    background-color: #f9f9f9;
-    border: 1px solid #e5e5e5;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
-.dropdown-2-headline {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-}
-.dropdown-3-headline {
-    border-radius: 0 0 5px 5px;
-}
-.dropdown-1-headline:hover,
-.dropdown-2-headline:hover,
-.dropdown-3-headline:hover {
-    border-color: #e1e1e1;
-    cursor: pointer;
-}
-/*.dropdown-3-headline:hover {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}*/
-.open-close-container-1,
-.open-close-container-2,
-.open-close-container-3 {
-    /*margin-top: -1px;*/
-    border: 1px solid #e5e5e5;
-    padding: 0 10px;
-}
-.open-close-container-2,
-.open-close-container-3 {
-    display: none;
-}
-.open-close-container-3 {
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-.dropdown-1-text,
-.dropdown-2-text,
-.dropdown-3-text {
-    margin-top: 10px;
-    color: #000;
-    text-align: right;
-    list-style: none;
     direction: rtl;
 }
-.dropdown-1-text-item,
-.dropdown-2-text,
-.dropdown-3-text {
-    margin-right: 10px;
+.contacts-link:hover {
+    text-decoration: none;
+    color: #2973ad;
+    font-weight: 600;
 }
 
 .footer-container {
