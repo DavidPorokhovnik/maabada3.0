@@ -11,7 +11,7 @@
 .about-left-side-content,
 .about-right-side-content {
     min-height: 360px;
-    padding: 0 24px 40px;
+    padding: 0 24px 72px;
 
 }
 .about-headline {
@@ -55,9 +55,13 @@
 .open-close-container-1,
 .open-close-container-2,
 .open-close-container-3 {
-    margin-top: -1px;
+    /*margin-top: -1px;*/
     border: 1px solid #e5e5e5;
     padding: 0 10px;
+}
+.open-close-container-2,
+.open-close-container-3 {
+    display: none;
 }
 .open-close-container-3 {
     border-bottom-left-radius: 5px;
@@ -70,6 +74,7 @@
     color: #000;
     text-align: right;
     list-style: none;
+    direction: rtl;
 }
 .dropdown-1-text-item,
 .dropdown-2-text,

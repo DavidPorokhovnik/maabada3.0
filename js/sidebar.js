@@ -43,7 +43,7 @@ function createMakers(makersArray) {
     let output = '';
     for (let i = 0; i < makersArray.length; i++) {
         //let maker = makersArray[i].charAt(0).toUpperCase() + makersArray[i].slice(1);
-        output += '<li><div class="link" id="' + makersArray[i] + '" onclick="getTypes(id)">' + makersArray[i] +
+        output += '<li class="sidebar-item"><div class="link" id="' + makersArray[i] + '" onclick="getTypes(id)">' + makersArray[i] +
             '<i class="fa fa-chevron-down"></i></div><ul class="submenu"></ul></li>';
     }
     $('#accordion').empty().append(output);
@@ -87,10 +87,8 @@ function createTypes(typesArray, maker) {
     let $next = document.getElementById(maker).nextElementSibling;
     $next.innerHTML = output;
     $($next).slideToggle();
-    /*if ($.find('.open')) {
-
-    }*/
     $($this).parent().toggleClass('open');
+    $('#accordion').find('.submenu').not($next).slideUp().parent().removeClass('open');
 }
 
 

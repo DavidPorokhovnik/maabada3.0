@@ -50,7 +50,7 @@
                     <a class="nav-link" href="#">ביקורות</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">צור קשר</a>
+                    <a class="nav-link" href="contacts.html">צור קשר</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="about.html">עלינו</a>
@@ -116,30 +116,30 @@
             ולתקן את הבעיה במקום. צור קשר כעת להצעת מחיר</p>
 
         <div class="about-dropdown">
-            <h6 class="dropdown-1-headline"">? איזה שירותי תיקונים אנחנו מבצעים</h6>
+            <h6 class="dropdown-1-headline">? איזה שירותי תיקונים אנחנו מבצעים</h6>
         </div>
 
         <div class="row open-close-container-1">
-            <!--<p class="dropdown-1-text">{{ isOpen ? '' : '' }}</p>-->
+
             <div class="col-6">
                 <ul class="dropdown-1-text">
-                    <li class="dropdown-1-text-item">תיקון מצלמה &#8226;</li>
-                    <li class="dropdown-1-text-item">תיקון כפתור בית &#8226;</li>
-                    <li class="dropdown-1-text-item">טיפול ברטט &#8226;</li>
-                    <li class="dropdown-1-text-item">טיפול בשמע &#8226;</li>
-                    <li class="dropdown-1-text-item">חיישן קרבה, טביעת אצבע &#8226;</li>
-                    <li class="dropdown-1-text-item">כניסת אוזניות &#8226;</li>
+                    <li class="dropdown-1-text-item"> &#8226; תיקון מצלמה </li>
+                    <li class="dropdown-1-text-item"> &#8226; תיקון כפתור בית </li>
+                    <li class="dropdown-1-text-item"> &#8226; טיפול ברטט </li>
+                    <li class="dropdown-1-text-item"> &#8226; טיפול בשמע </li>
+                    <li class="dropdown-1-text-item"> &#8226; חיישן קרבה, טביעת אצבע </li>
+                    <li class="dropdown-1-text-item"> &#8226; כניסת אוזניות </li>
                 </ul>
             </div>
 
             <div class="col-6">
                 <ul class="dropdown-1-text">
-                    <li class="dropdown-1-text-item">החלפת ותיקון מסך &#8226;</li>
-                    <li class="dropdown-1-text-item">תיקון שקע טעינה &#8226;</li>
-                    <li class="dropdown-1-text-item">החלפת סוללה &#8226;</li>
-                    <li class="dropdown-1-text-item">תיקון ספיקר &#8226;</li>
-                    <li class="dropdown-1-text-item">ניקוי קרוזיה &#8226;</li>
-                    <li class="dropdown-1-text-item">תיקון תושבת SIM &#8226;</li>
+                    <li class="dropdown-1-text-item"> &#8226; החלפת ותיקון מסך </li>
+                    <li class="dropdown-1-text-item"> &#8226; תיקון שקע טעינה </li>
+                    <li class="dropdown-1-text-item"> &#8226; החלפת סוללה </li>
+                    <li class="dropdown-1-text-item"> &#8226; תיקון ספיקר </li>
+                    <li class="dropdown-1-text-item"> &#8226; ניקוי קרוזיה </li>
+                    <li class="dropdown-1-text-item"> &#8226; תיקון תושבת SIM </li>
                 </ul>
             </div>
 
@@ -221,6 +221,21 @@
 <script src="./js/accordion-dropdown-menu.js"></script>
 <script src="./js/sidebar.js"></script>
 <script src="./js/send.js"></script>
+<script>
+
+    $(document).ready(function () {
+        $('.dropdown-1-headline').click(function () {
+            $('.open-close-container-1').slideToggle('slow');
+        });
+        $('.dropdown-2-headline').click(function () {
+            $('.open-close-container-2').slideToggle('slow');
+        });
+        $('.dropdown-3-headline').click(function () {
+            $('.open-close-container-3').slideToggle('slow');
+        })
+    })
+
+</script>
 
 </body>
 </html>
