@@ -1,0 +1,35 @@
+.reviews-main-container {
+    position: absolute;
+    top: 112px;
+    width: 100%;
+    margin: 20px auto 0;
+}
+.reviews-content {
+    display: block;
+    height: 300px;
+}
+.reviews-left-side-content,
+.reviews-right-side-content {
+    min-height: 360px;
+    padding: 0 24px 72px;
+}
+
+.reviews-headline {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.reviews-text {
+    text-align: center;
+    margin-bottom: 40px;
+    direction: rtl;
+}
+.reviews-link:hover {
+    text-decoration: none;
+    color: #2973ad;
+    font-weight: 600;
+}
+
+.footer-container {
+    margin-top: 64px;
+}
