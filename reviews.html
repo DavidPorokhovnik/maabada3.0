@@ -73,7 +73,7 @@
 
 <main class="row reviews-main-container">
 
-    <div class="col-6 reviews-left-side-content">
+    <div class="col-6 reviews-left-side-content" id="reviews-container">
 
     </div>
 
@@ -81,7 +81,28 @@
 
         <h3 class="reviews-headline">ביקורות</h3>
 
-        <p class="reviews-text">כאן ניתן להשאיר חוות דעת לגבי השירות</p>
+        <p class="reviews-text" id="review-send-response">כאן ניתן להשאיר חוות דעת לגבי השירות</p>
+
+        <div class="order-form">
+            <div class="order-form-container">
+
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-sm" id="inputName" placeholder="הקלד את שמך">
+                        <label for="inputName" class="bmd-label-floating input-label">שם</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" id="textarea" rows="5"></textarea>
+                        <label for="textarea" class="bmd-label-floating input-label">שדה טקסט</label>
+                    </div>
+                    <div class="form-btn-container">
+                        <button class="btn btn-primary btn-raised" id="btn-send-review">לשלוח</button>
+                        <button class="btn btn-default btn-cancel">בטל</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
 
     </div>
 
@@ -131,6 +152,7 @@
 <script src="./js/accordion-dropdown-menu.js"></script>-->
 <!---------- End of Smooth Accordion Dropdown Menu js ---------->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!--<script src="./js/send-review.js"></script>-->
 
 </body>
 </html>

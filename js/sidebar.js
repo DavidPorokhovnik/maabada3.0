@@ -23,7 +23,6 @@ function getMakers() {
 
     // Callback handler that will be called on success
     request.done(function (response, textStatus, jqXHR) {
-        // console.log("resp: " + response);
         // console.log("textStatus: " + textStatus);
         console.log(response);
         var makersArray = jQuery.parseJSON(response);
@@ -134,6 +133,11 @@ function createModels(modelsArray, type, maker) {
 
 
 function getPrices(name) {
+
+    let $this = document.getElementById(name);
+    $('#accordion').find('.active-model').not($this).removeClass('active-model');
+    $($this)[0].className = 'active-model';
+    //document.getElementById(name).setAttribute('class', 'active-model');
 
     let model = name.split('-')[0];
     let maker = name.split('-')[1];

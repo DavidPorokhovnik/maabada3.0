@@ -317,7 +317,7 @@ header {
     transition: all 0.4s ease;
 }
 .accordion .link:hover {
-    background-color: #dbdbdb;
+    /*background-color: #dbdbdb;*/
     color: #63a1df;
 }
 .accordion li:last-child .link { border-bottom: 0; }
@@ -370,7 +370,13 @@ header {
     padding: 6px 8px 6px 42px;
 }
 .sub-submenu div:hover {
-    background: #2973ad;
+    background-color: #90caf9;
+    /*background-color: #64b5f6;*/
+    color: #fff;
+}
+.active-model {
+    background-color: #90caf9;
+    /*background-color: #64b5f6;*/
     color: #fff;
 }
 /* ------- End of Smooth Accordion Dropdown Menu ------- */

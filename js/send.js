@@ -2,7 +2,7 @@
 // canceling an order
 // sending an order to server
 
-const ADDORDER_URL = 'https://phoneservice.herokuapp.com/orderadd'
+const ADDORDER_URL = 'https://phoneservice.herokuapp.com/orderadd';
 
 $(document).ready(function(){
     // number of work in the order form
