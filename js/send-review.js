@@ -14,12 +14,12 @@ $(document).ready(function () {
 
         request.done(function (response, textStatus, jqXHR) {
             console.log(response);
-            var reviewsArray = jQuery.parseJSON(response);
+            let reviewsArray = jQuery.parseJSON(response);
+            console.log(reviewsArray);
             if (reviewsArray.length > 0) {
                 createReviews(reviewsArray);
             }
         });
-        // Callback handler that will be called on failure
         request.fail(function (jqXHR, textStatus, errorThrown) {
             console.log(
                 "The following error occurred: " + textStatus, errorThrown
@@ -30,7 +30,8 @@ $(document).ready(function () {
     function createReviews(reviewsArray) {
         let output = '';
         for (let i = 0; i < reviewsArray.length; i++) {
-            output += '<section><h5 class="reviews-headline">' + reviewsArray[i] + '</h5><p class="reviews-text"></p></section>';
+            output += '<section><h5 class="reviews-headline">' + reviewsArray[i]['name'] + '</h5>' +
+                '<p class="reviews-text">' + reviewsArray[i]['description'] + '</p></section>';
         }
         $('#reviews-container').empty().append(output);
     }
@@ -56,11 +57,9 @@ $(document).ready(function () {
 
         request.done(function (response, textStatus, jqXHR) {
             console.log(response);
-            document.getElementById('review-send-response').innerHTML = 'הביקורת שלך נשלח. תודה רבה.';
-            //$('#review-send-response')[0].innerHTML = 'הביקורת שלך נשלח. תודה רבה.';
+            document.getElementById('reviews-text').innerHTML = 'הביקורת שלך נשלח. תודה רבה.';
             setTimeout(function() {
-                document.getElementById('review-send-response').innerHTML = 'כאן ניתן להשאיר חוות דעת לגבי השירות';
-                //$('#review-send-response')[0].innerHTML = 'כאן ניתן להשאיר חוות דעת לגבי השירות';
+                document.getElementById('reviews-text').innerHTML = 'כאן ניתן להשאיר חוות דעת לגבי השירות';
             },5000);
         });
         request.fail(function (jqXHR, textStatus, errorThrown) {

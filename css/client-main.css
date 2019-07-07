@@ -235,17 +235,6 @@ header {
     border-radius: 4px;
     box-shadow: 0 2px 2px rgba(10,16,20,.24);
 }
-.form-works-container {
-
-}
-.form-works-title, .number, .order-works {
-    text-align: right;
-}
-.form-group {
-    display: flex;
-    flex-direction: column-reverse;
-    direction: rtl;
-}
 .fixing-model-paragraph, .input-label, .form-text {
     text-align: right;
 }
@@ -260,8 +249,21 @@ header {
     color: #595959;
     direction: ltr;
 }
-.fixing-model-title {
-
+.form-works-container, .total-cost-paragraph {
+    text-align: right;
+    direction: rtl;
+}
+/*.form-works-title, .number, .order-works {
+    text-align: right;
+}*/
+.total-cost-paragraph {
+    display: none;
+    margin-bottom: 24px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column-reverse;
+    direction: rtl;
 }
 /*work only with next element*/
 .form-control:focus ~ .input-label {
