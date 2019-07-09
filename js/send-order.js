@@ -84,17 +84,18 @@ $(document).ready(function (message){
         let fixingModel = document.getElementById('fixing-model').innerText;
         let maker = fixingModel.split(' ')[0];
         let type = fixingModel.split(' ')[1];
-        let model = fixingModel.split(' ')[2];
+        let model = fixingModel;
         let works = JSON.stringify(worksArray); // !
 
-        console.log(id);
+        /*console.log(id);
         console.log(email);
         console.log(tel);
         console.log(maker);
         console.log(type);
         console.log(model);
         console.log(works);
-        alert(works);
+        console.log(totalCost);
+        alert(totalCost);*/
 
         request = $.ajax({
             url: ADDORDER_URL,
@@ -106,7 +107,8 @@ $(document).ready(function (message){
                 "make": maker,
                 "type": type,
                 "model": model,
-                "works": works
+                "works": works,
+                "price": totalCost
             }
         });
         

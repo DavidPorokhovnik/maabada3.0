@@ -4,19 +4,17 @@
     width: 100%;
     margin: 20px auto 0;
 }
-.reviews-content {
-    display: block;
-    height: 300px;
-}
 .reviews-left-side-content,
 .reviews-right-side-content {
+    /*width: 50%;*/
     min-height: 360px;
     padding: 0 24px 72px;
 }
 
 .review-form {
-    max-width: 848px;
-    min-width: 440px;
+    /*max-width: 848px;
+    min-width: 440px;*/
+    width: 90%;
     margin: 0 auto 72px;
     box-sizing: border-box;
 }

@@ -79,7 +79,7 @@ header {
     /*padding: 0 8px 0 24px;*/
     background-color: #2973ad;
     box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
-    z-index: 5;
+    z-index: 25;
 }
 /*.navbar {
     height: 64px;
@@ -97,6 +97,35 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+}
+/*.mobile-sidebar-toggle {
+    font-size: 20px;
+    border: 1px solid #eee;
+    background: #f5f5f5;
+    color: black;
+    padding: 3px 3px;
+    border-radius: 3px;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    line-height: 30px;
+    margin: 14px 3px 3px 3px;
+    float: left;
+    display: none;
+}*/
+.mobile-sidebar-checkbox {display: none;}
+.mobile-sidebar-checkbox + label {
+    display: none;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    width: 25px;
+    height: 17px;
+    margin: 5px;
+    border-top: 3px solid #fafafa;
+    border-bottom: 10px double #fafafa;
+    /*z-index: 31;*/
+    cursor: pointer;
 }
 .nav {
     padding: 0 36px 0 0;
@@ -127,6 +156,12 @@ header {
     padding: 0;
     margin: 0;
 }
+.mobile-sidebar-container {
+    display: none;
+}
+.mobile-accordion {
+    display: none;
+}
 .main-container {
     position: absolute;
     top: 112px;
@@ -140,7 +175,16 @@ header {
     /*display: flex;
     flex-flow: column nowrap;
     align-items: baseline;*/
+    width: 82%;
 }
+.sidebar {
+    width: 18%;
+    min-height: 100%;
+    border-left: 1px solid rgba(0,0,0,.12);
+    box-shadow: -6px 0 6px rgba(0,0,0,.1);
+    z-index: 2;
+}
+
 .dialog-paragraph, .message-paragraph, .alert-paragraph {
     width: 100%;
     height: 20px;
@@ -178,7 +222,7 @@ header {
     min-width: 200px;
     min-height: 108px;
     padding: 30px 16px 24px;
-    margin: 24px 8px;
+    margin: 24px 16px;
     text-align: center;
     background-color: #fff;
     border: 1px solid #e6e6e6;
@@ -212,9 +256,12 @@ header {
     font-size: 14px;
 }
 /* ------- End of Works & Prices Tabs ------- */
+
+/* ------- Order Form ------- */
 .order-form {
-    max-width: 848px;
-    min-width: 440px;
+    /*max-width: 848px;
+    min-width: 440px;*/
+    width: 80%;
     margin: 0 auto 72px;
     box-sizing: border-box;
 }
@@ -224,7 +271,6 @@ header {
     font-size: 22px;
     color: #595959;
 }
-/* ------- Order Form ------- */
 .order-form-container {
     /*margin: 0 auto 72px;*/
     box-sizing: border-box;
@@ -289,18 +335,12 @@ header {
 }
 /* ------- End of Order Form ------- */
 
-.sidebar {
-    min-height: 100%;
-    border-left: 1px solid rgba(0,0,0,.12);
-    box-shadow: -6px 0 6px rgba(0,0,0,.1);
-    z-index: 2;
-}
 /* ------- Smooth Accordion Dropdown Menu ------- */
 .accordion {
     width: 100%;
     min-height: 230px;
     max-width: 360px;
-    min-width: 180px;
+    /*min-width: 180px;*/
     margin: 10px auto 20px;
     /*-webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -322,7 +362,7 @@ header {
     /*background-color: #dbdbdb;*/
     color: #63a1df;
 }
-.accordion li:last-child .link { border-bottom: 0; }
+/*.accordion li:last-child .link { border-bottom: 0; }*/
 .accordion li i {
     font-family: fontawesome;
     position: absolute;
@@ -421,8 +461,51 @@ footer {
     direction: rtl;
 }
 
-@media only screen and (max-width : 767px) {
-.no-displayed {
-    display: none;
+@media only screen and (max-width : 991px) {
+    /*.mobile-sidebar-toggle {
+        display: block;
+    }*/
+    .sidebar {
+        display: none;
+    }
+    .mobile-sidebar-checkbox + label {
+        display: block;
+    }
+    .content-container {
+        width: 100%;
+    }
+    .mobile-sidebar-container {
+        /*display: block;*/
+        position: absolute;
+        /*z-index: 15;*/
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.26);
+    }
+    .mobile-sidebar {
+        width: 320px;
+        height: 100%;
+        margin-top: -10px;
+        /*z-index: 200;*/
+        background-color: #fafafa;
+        box-shadow: 6px 0 6px rgba(0,0,0,.1);
+    }
+    .accordion {
+        padding-top: 10px;
+    }
+    .mobile-accordion {
+        display: block;
+    }
+    .link {
+        padding: 8px 20px 8px 24px !important;
+    }
 }
+
+@media only screen and (max-width : 767px) {
+    .no-displayed {
+    display: none;
+    }
+    .order-form {
+    width: 90%;
+    }
 }

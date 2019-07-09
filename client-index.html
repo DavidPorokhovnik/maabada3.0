@@ -74,7 +74,16 @@
                 </div>
             </nav>-->
             <!---------- End of Alternative Bootstrap Navbar ---------->
+
             <nav class="navbar-container">
+
+                <!--<button class="btn-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>-->
+                <!--<div id="hamburger" class="mobile-sidebar-toggle"></div>-->
+                <input type="checkbox" class="mobile-sidebar-checkbox" id="mobile-sidebar-checkbox"/>
+                <label for="mobile-sidebar-checkbox" class="mobile-sidebar-toggle"></label>
 
                 <ul class="nav">
                     <li class="nav-item">
@@ -92,7 +101,7 @@
                 </ul>
 
                 <a class="navbar-brand" href="#" title="Home">
-                    <span class="logo-name">'מעבדת שייקביץ</span>
+                    <span class="logo-name no-displayed">'מעבדת שייקביץ</span>
                     <img src="./assets/logo1.png" alt="logo">
                 </a>
 
@@ -104,49 +113,57 @@
 
     <main class="row main-container">
 
-        <section class="col-10 content-container">
+        <section class="mobile-sidebar-container">
+            <aside class="mobile-sidebar">
+
+                <ul class="accordion mobile-accordion"></ul>
+
+            </aside>
+        </section>
+
+        <section class="content-container">
 
             <p class="dialog-paragraph" id="dialog-paragraph">בחר את הדגם המבוקש מתוך הרשימה בצד ימין</p>
 
             <div class="works-container">
 
-                <div class="work" id="1">
+                <div class="work" id="0">
                     <p class="work-name">החלפת מסך</p>
                     <p class="work-price"><span></span><i class="fa fa-shekel"></i></p>
                 </div>
-                <div class="work" id="2">
+                <div class="work" id="1">
                     <p class="work-name">החלפת סלולה</p>
                     <p class="work-price"><span></span><i class="fa fa-shekel"></i></p>
                 </div>
-                <div class="work" id="3">
+                <div class="work" id="2">
                     <p class="work-name">החלפת מצלמה קדמית</p>
                     <p class="work-price"><span></span><i class="fa fa-shekel"></i></p>
                 </div>
-                <div class="work" id="4">
+                <div class="work" id="3">
                     <p class="work-name">החלפת מצלמה אחורית</p>
                     <p class="work-price"><span></span><i class="fa fa-shekel"></i></p>
                 </div>
-                <div class="work" id="5">
+                <div class="work" id="4">
                     <p class="work-name">החלפת שקע טעינה</p>
                     <p class="work-price"><span></span><i class="fa fa-shekel"></i></p>
                 </div>
-                <div class="work" id="6">
+                <div class="work" id="5">
                     <p class="work-name">החלפת גב אחורי</p>
                     <p class="work-price"><span></span><i class="fa fa-shekel"></i></p>
                 </div>
-                <div class="work" id="7">
+                <div class="work" id="6">
                     <p class="work-name">החלפת רמקול</p>
                     <p class="work-price"><span></span><i class="fa fa-shekel"></i></p>
                 </div>
-                <div class="work" id="8">
+                <div class="work" id="7">
                     <p class="work-name">החלפת כפתור בית</p>
                     <p class="work-price"><span></span><i class="fa fa-shekel"></i></p>
                 </div>
-                <div class="work" id="9">
+                <div class="work" id="8">
                     <p class="work-name">החלפת אוזניית שמע</p>
                     <p class="work-price"><span></span><i class="fa fa-shekel"></i></p>
                 </div>
-                <div class="work" id="10">
+                <div class="work" id="9">
                     <p class="work-name">טיפול בכורוזיה</p>
                     <p class="work-price"><span></span><i class="fa fa-shekel"></i></p>
                 </div>
@@ -201,11 +218,12 @@
 
         </section>
 
-        <aside class="col-2 sidebar">
+        <aside class="sidebar">
 
             <ul id="accordion" class="accordion"></ul>
 
         </aside>
+
 
         <footer>
             <div class="footer-container">

@@ -11,6 +11,32 @@ $(document).ready(function(){
 
     getMakers();
 
+    /*var h = $("#hamburger");
+    h.addClass('fa fa-toggle-down');
+    h.on('click', function(){
+        if (h.hasClass('fa-toggle-down')) {
+            h
+                .removeClass('fa-toggle-down')
+                .addClass('fa-toggle-up');
+            $(".mobile-sidebar-container").show();
+        }
+        else {
+            h
+                .removeClass('fa-toggle-up')
+                .addClass('fa-toggle-down');
+            $(".mobile-sidebar-container").hide();
+        }
+    });*/
+
+    $('.mobile-sidebar-toggle').click(function () {
+        if ($('#mobile-sidebar-checkbox').not(':checked')) {
+            $('.mobile-sidebar-container').css({display: 'block'});
+        }
+        if ($('#mobile-sidebar-checkbox').is(':checked')){
+            $('.mobile-sidebar-container').css({display: 'none'});
+        }
+    })
+
 });
 
 
@@ -45,7 +71,7 @@ function createMakers(makersArray) {
         output += '<li class="sidebar-item"><div class="link" id="' + makersArray[i] + '" onclick="getTypes(id)">' + makersArray[i] +
             '<i class="fa fa-chevron-down"></i></div><ul class="submenu"></ul></li>';
     }
-    $('#accordion').empty().append(output);
+    $('.accordion').empty().append(output);
 }
 
 
@@ -87,7 +113,7 @@ function createTypes(typesArray, maker) {
     $next.innerHTML = output;
     $($next).slideToggle();
     $($this).parent().toggleClass('open');
-    $('#accordion').find('.submenu').not($next).slideUp().parent().removeClass('open');
+    $('.accordion').find('.submenu').not($next).slideUp().parent().removeClass('open');
 }
 
 
@@ -135,7 +161,7 @@ function createModels(modelsArray, type, maker) {
 function getPrices(name) {
 
     let $this = document.getElementById(name);
-    $('#accordion').find('.active-model').not($this).removeClass('active-model');
+    $('.accordion').find('.active-model').not($this).removeClass('active-model');
     $($this)[0].className = 'active-model';
     //document.getElementById(name).setAttribute('class', 'active-model');
 
