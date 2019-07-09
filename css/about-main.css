@@ -10,7 +10,7 @@
 }*/
 .about-left-side-content,
 .about-right-side-content {
-    /*width: 50%;*/
+    width: 50%;
     min-height: 360px;
     padding: 0 24px 72px;
 }
@@ -157,8 +157,11 @@
     margin-top: 64px;
 }
 
-/*@media only screen and (max-width : 991px) {
+@media only screen and (max-width : 767px) {
     .about-left-side-content {
         display: none;
     }
-}*/
+    .about-right-side-content {
+        width: 100%;
+    }
+}
