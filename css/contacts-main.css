@@ -10,6 +10,7 @@
 }
 .contacts-left-side-content,
 .contacts-right-side-content {
+    width: 50%;
     min-height: 360px;
     padding: 0 24px 72px;
 }
@@ -90,4 +91,13 @@
 
 .footer-container {
     margin-top: 64px;
+}
+
+@media only screen and (max-width : 767px) {
+    .contacts-left-side-content {
+        display: none;
+    }
+    .contacts-right-side-content {
+        width: 100%;
+    }
 }
