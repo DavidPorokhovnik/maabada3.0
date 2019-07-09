@@ -6,17 +6,14 @@
 }
 .reviews-left-side-content,
 .reviews-right-side-content {
-    /*width: 50%;*/
+    width: 50%;
     min-height: 360px;
-    padding: 0 24px 72px;
+    padding: 0 24px 36px;
 }
 
 .review-form {
-    /*max-width: 848px;
-    min-width: 440px;*/
     width: 90%;
-    margin: 0 auto 72px;
-    box-sizing: border-box;
+    margin: 0 auto 36px;
 }
 .review-form-container {
     /*margin: 0 auto 72px;*/
@@ -50,4 +47,11 @@
 
 .footer-container {
     margin-top: 64px;
+}
+
+@media only screen and (max-width : 767px) {
+    .reviews-left-side-content,
+    .reviews-right-side-content {
+        width: 100%;
+    }
 }
