@@ -9,11 +9,6 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
 
-    <!---------- Bootstrap css ---------->
-    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-          crossorigin="anonymous">-->
-    <!---------- End of Bootstrap css ---------->
     <!---------- Bootstrap Material Design css ---------->
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
           integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
@@ -29,7 +24,7 @@
         <div class="toolbar-row">
 
             <div class="toolbar-row-item">
-                <span class="phone-number" title="Call">052-7707494</span>
+                <a class="phone-number" href="tel:0527707494" style="text-decoration:none" title="Call">052-7707494</a>
                 <span class="phone-number-caption no-displayed">לתושבי נתניה והסביבה</span>
             </div>
 
@@ -41,39 +36,6 @@
         </div>
 
         <div class="top-nav-row">
-            <!---------- Alternative Bootstrap Navbar ---------->
-            <!--<nav class="navbar navbar-expand-lg flex-row-reverse">
-                <a class="navbar-brand" href="#" title="Home">
-                    <span class="logo-name">'מעבדת שייקביץ</span>
-                    <img src="./assets/logo1.png" alt="logo">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse flex-row" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">מחיר<span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">עלינו</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">צור קשר</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">ביקורות</a>
-                        </li>
-                    </ul>
-                    &lt;!&ndash;<form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>&ndash;&gt;
-                </div>
-            </nav>-->
-            <!---------- End of Alternative Bootstrap Navbar ---------->
 
             <nav class="navbar-container">
 
@@ -113,13 +75,13 @@
 
     <main class="row main-container">
 
-        <section class="mobile-sidebar-container">
+       <!-- <section class="mobile-sidebar-container">
             <aside class="mobile-sidebar">
 
                 <ul class="accordion mobile-accordion"></ul>
 
             </aside>
-        </section>
+        </section>-->
 
         <section class="content-container">
 
@@ -178,11 +140,12 @@
                         <span class="fixing-model-title">דגם של הסמארטפון תחת תיקון : </span>
                         <span lang="en" class="fixing-model" id="fixing-model"></span>
                     </p>
+
                     <div class="form-works-container">
-                        <!--<input type="text" class="form-control form-control-sm work-field" placeholder="1.">-->
                         <div class="order-works"><p class="number">1. </p></div>
                         <p class="form-works-title">הקליקו על התיקונים הנדרשים על מנת להכניסם לטופס.</p>
                     </div>
+
                     <p class="total-cost-paragraph">
                         <span class="total-cost-title">סך עלות העבודה :</span>
                         <span class="total-cost"></span>
@@ -218,12 +181,11 @@
 
         </section>
 
-        <aside class="sidebar">
+        <aside id="sidebar" class="sidebar">
 
             <ul id="accordion" class="accordion"></ul>
 
         </aside>
-
 
         <footer>
             <div class="footer-container">
@@ -241,129 +203,9 @@
 
     </main>
 
-    <!---------- Bootstrap js ---------->
-    <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-            crossorigin="anonymous"></script>-->
-    <!---------- End of Bootstrap js ---------->
-
-    <!---------- Bootstrap Material Design js ---------->
-    <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
-            integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
-            crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
-            integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
-            crossorigin="anonymous"></script>
-    <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>-->
-    <!---------- End of Bootstrap Material Design js ---------->
-
-    <!---------- Smooth Accordion Dropdown Menu js ---------->
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="./js/accordion-dropdown-menu.js"></script>-->
-    <!---------- End of Smooth Accordion Dropdown Menu js ---------->
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!--<script  src="./js/accordion-dropdown-menu.js"></script>-->
     <script defer src="./js/sidebar.js"></script>
     <script defer src="./js/send-order.js"></script>
-    <!--script>
-        function showMakers()
-        {
-            $.ajax({
-                method: 'Post',
-                url: 'https://phoneservice.herokuapp.com/getmakes',
-                cache: false,
-                success: function (response) {
-                    let makersArray = $.parseJSON(response);
-                    let output = '';
-                    for (let i = 0; i < makersArray.length; i++) {
-                        output += '<li><div class="link">' + makersArray[i] +
-                            '<i class="fa fa-chevron-down"></i></div><ul class="submenu"></ul></li>';
-                    }
-                    $('#accordion').empty().append(output);
-                }
-            });
-        }
-
-        function showTypes()
-                {
-                    $('#accordion').on('click','.link',function(){
-                        console.log($(this));
-                        let request = $(this).prop('textContent');
-                        console.log(request);
-                        $.ajax({
-                            method: 'Post',
-                            url: 'https://phoneservice.herokuapp.com/gettypes',
-                            data: {'make': request},
-                            success: (function(response) {
-                                console.log(response);
-                                let typesArray = $.parseJSON(response);
-                                let output = '';
-                                for (let i = 0; i < typesArray.length; i++) {
-                                    output += '<li><a href="#">' + typesArray[i] + '</a></li>';
-                                }
-                                console.log(output);
-                                console.log($(this));
-                                $(this).next('.submenu').append(output);
-                                $(this).next('.submenu').slideToggle();
-                                $(this).parent().toggleClass('open');
-                            }).bind(this),
-                            error: function(er) {
-                                console.log(er);
-                            }
-                        });
-                    })
-                }
-
-        $(document).ready(function(){
-            //showMakers();
-            //showTypes();
-            /*$(document).on('click touchstart', '#maker', function(){
-                console.log($(this));
-                let div = $(this);
-                $.ajax({
-                    method: 'Post',
-                    url: 'https://phoneservice.herokuapp.com/gettypes',
-                    /!*dataType: "json",*!/
-                    data: {make: div.innerText},
-                    success: function(data) {
-                        let dataArray = $.parseJSON(data);
-                        let output = '';
-                        for (let i = 0; i < dataArray.length; i++) {
-                            output += '<li>' + dataArray[i] + '</li>';
-                        }
-                        $('#types').empty().append(output);
-                    }
-                });
-            });*/
-        });
-
-        /*$(document).ready(function(){
-
-            $.ajax({
-                method: 'Post',
-                url: 'https://phoneservice.herokuapp.com/getmakes',
-                cache: false,
-                success: function (data) {
-                    let dataArray = $.parseJSON(data);
-                    let output = '';
-                    for (let i = 0; i < dataArray.length; i++) {
-                        output += '<div class="link" id="maker" >' + dataArray[i] + '<i class="fa fa-chevron-down"></i></div>';
-                    }
-                    $('#makers-menu').empty().append(output);
-                }
-            });
-
-        });*/
-    </script-->
 
 </body>
 </html>

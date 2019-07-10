@@ -28,12 +28,23 @@ $(document).ready(function(){
         }
     });*/
 
+    $(window).resize(function () {
+        if ($(document).width < 992) {
+            $('.sidebar,.accordion').wrapAll('<section class="mobile-sidebar-container"></section>');
+            $('#sidebar').toggleClass('sidebar').toggleClass('mobile-sidebar');
+        }
+    });
+
     $('.mobile-sidebar-toggle').click(function () {
         if ($('#mobile-sidebar-checkbox').not(':checked')) {
             $('.mobile-sidebar-container').css({display: 'block'});
+            /*$('.mobile-sidebar').css({display: 'block'});
+            $('.mobile-accordion').css({display: 'block'});*/
         }
         if ($('#mobile-sidebar-checkbox').is(':checked')){
             $('.mobile-sidebar-container').css({display: 'none'});
+            /*$('.mobile-sidebar').css({display: 'none'});
+            $('.mobile-accordion').css({display: 'none'});*/
         }
     })
 
