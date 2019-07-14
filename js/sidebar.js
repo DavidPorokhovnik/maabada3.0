@@ -6,34 +6,24 @@ const MODEL_URL = 'https://phoneservice.herokuapp.com/getmodel';
 
 //let global_maker = '';
 //let model_id="";
+let sidebar;
+let desktopSidebar;
+let mobileSidebar;
 
 $(document).ready(function(){
 
     getMakers();
 
-    /*var h = $("#hamburger");
-    h.addClass('fa fa-toggle-down');
-    h.on('click', function(){
-        if (h.hasClass('fa-toggle-down')) {
-            h
-                .removeClass('fa-toggle-down')
-                .addClass('fa-toggle-up');
-            $(".mobile-sidebar-container").show();
+    /*$(window).resize(function () {*/
+        if ($(document).width() > 991) {
+            /*$('.sidebar,.accordion').wrapAll('<section class="mobile-sidebar-container"></section>');
+            $('#sidebar').toggleClass('sidebar').toggleClass('mobile-sidebar');*/
+            sidebar = $('.accordion');
         }
         else {
-            h
-                .removeClass('fa-toggle-up')
-                .addClass('fa-toggle-down');
-            $(".mobile-sidebar-container").hide();
+            sidebar = $('.mobile-accordion');
         }
-    });*/
-
-    $(window).resize(function () {
-        if ($(document).width < 992) {
-            $('.sidebar,.accordion').wrapAll('<section class="mobile-sidebar-container"></section>');
-            $('#sidebar').toggleClass('sidebar').toggleClass('mobile-sidebar');
-        }
-    });
+    /*});*/
 
     $('.mobile-sidebar-toggle').click(function () {
         if ($('#mobile-sidebar-checkbox').not(':checked')) {
@@ -82,7 +72,9 @@ function createMakers(makersArray) {
         output += '<li class="sidebar-item"><div class="link" id="' + makersArray[i] + '" onclick="getTypes(id)">' + makersArray[i] +
             '<i class="fa fa-chevron-down"></i></div><ul class="submenu"></ul></li>';
     }
-    $('.accordion').empty().append(output);
+    /*$('.accordion').empty().append(output);
+    $('.mobile-accordion').empty().append(output);*/
+    $(sidebar).empty().append(output);
 }
 
 
@@ -124,7 +116,9 @@ function createTypes(typesArray, maker) {
     $next.innerHTML = output;
     $($next).slideToggle();
     $($this).parent().toggleClass('open');
-    $('.accordion').find('.submenu').not($next).slideUp().parent().removeClass('open');
+   /* $('.accordion').find('.submenu').not($next).slideUp().parent().removeClass('open');
+    $('.mobile-accordion').find('.submenu').not($next).slideUp().parent().removeClass('open');*/
+    $(sidebar).find('.submenu').not($next).slideUp().parent().removeClass('open');
 }
 
 
@@ -172,7 +166,9 @@ function createModels(modelsArray, type, maker) {
 function getPrices(name) {
 
     let $this = document.getElementById(name);
-    $('.accordion').find('.active-model').not($this).removeClass('active-model');
+    /*$('.accordion').find('.active-model').not($this).removeClass('active-model');
+    $('.mobile-accordion').find('.active-model').not($this).removeClass('active-model');*/
+    $(sidebar).find('.active-model').not($this).removeClass('active-model');
     $($this)[0].className = 'active-model';
     //document.getElementById(name).setAttribute('class', 'active-model');
 

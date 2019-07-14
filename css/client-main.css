@@ -15,6 +15,10 @@ html, body {
     font-family: 'Open Sans Hebrew', serif;
     letter-spacing: 1px;
 }
+.row {
+    padding: 0;
+    margin: 0;
+}
 ul { list-style-type: none; }
 
 a { text-decoration: none; }
@@ -41,7 +45,7 @@ header {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    z-index: 3;
+    z-index: 23;
 }
 .toolbar-row {
     height: 48px;
@@ -81,16 +85,6 @@ header {
     box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
     z-index: 25;
 }
-/*.navbar {
-    height: 64px;
-    padding: 8px 24px;
-}
-.navbar-toggler {
-    border-color: #fafafa;
-}
-.nav-link {
-    color: #fff;
-}*/
 .navbar-container {
     height: 64px;
     padding: 0 24px;
@@ -98,21 +92,6 @@ header {
     justify-content: flex-end;
     align-items: center;
 }
-/*.mobile-sidebar-toggle {
-    font-size: 20px;
-    border: 1px solid #eee;
-    background: #f5f5f5;
-    color: black;
-    padding: 3px 3px;
-    border-radius: 3px;
-    width: 36px;
-    height: 36px;
-    text-align: center;
-    line-height: 30px;
-    margin: 14px 3px 3px 3px;
-    float: left;
-    display: none;
-}*/
 .mobile-sidebar-checkbox {display: none;}
 .mobile-sidebar-checkbox + label {
     display: none;
@@ -151,12 +130,8 @@ header {
     font-weight: 600;
     color: #fafafa;
 }
-
-.row {
-    padding: 0;
-    margin: 0;
-}
-.mobile-sidebar-container {
+/*--------------------- mobile sidebar, content, desktop sidebar ---------------------*/
+.mobile-sidebar-container, .mobile-sidebar {
     display: none;
 }
 .mobile-accordion {
@@ -338,7 +313,8 @@ header {
 /* ------- End of Order Form ------- */
 
 /* ------- Smooth Accordion Dropdown Menu ------- */
-.accordion {
+.accordion,
+.mobile-accordion {
     width: 100%;
     min-height: 230px;
     max-width: 360px;
@@ -348,7 +324,8 @@ header {
     -moz-border-radius: 4px;
     border-radius: 4px;*/
 }
-.accordion .link {
+.accordion .link,
+.mobile-accordion .link {
     cursor: pointer;
     display: block;
     padding: 8px 20px 8px 28px;
@@ -360,12 +337,14 @@ header {
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
-.accordion .link:hover, .accordion .link:hover i.fa-chevron-down {
+.accordion .link:hover, .accordion .link:hover i.fa-chevron-down,
+.mobile-accordion .link:hover, .mobile-accordion .link:hover i.fa-chevron-down {
     /*background-color: #dbdbdb;*/
     color: #63a1df;
 }
 /*.accordion li:last-child .link { border-bottom: 0; }*/
-.accordion li i {
+.accordion li i,
+.mobile-accordion li i{
     font-family: fontawesome;
     position: absolute;
     top: 12px;
@@ -376,14 +355,18 @@ header {
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
-.accordion li i.fa-chevron-down {
+.accordion li i.fa-chevron-down,
+.mobile-accordion li i.fa-chevron-down {
     right: 24px;
     left: auto;
     font-size: 14px;
 }
-.accordion li.open .link { color: #2973ad; }
-.accordion li.open i { color: #2973ad !important; }
-.accordion li.open i.fa-chevron-down {
+.accordion li.open .link,
+.mobile-accordion li.open .link { color: #2973ad; }
+.accordion li.open i,
+.mobile-accordion li.open i { color: #2973ad !important; }
+.accordion li.open i.fa-chevron-down,
+.mobile-accordion li.open i.fa-chevron-down {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg);
@@ -426,7 +409,7 @@ header {
 /* ------- End of Smooth Accordion Dropdown Menu ------- */
 
 footer {
-    z-index: 10;
+    z-index: 20;
     width: 100%;
     position: relative;
     bottom: 0;
@@ -515,10 +498,11 @@ footer {
         background-color: rgba(0,0,0,.26);
     }
     .mobile-sidebar {
+        display: block;
         width: 320px;
         height: 100%;
         margin-top: -10px;
-        /*z-index: 200;*/
+        /*z-index: 20;*/
         background-color: #fafafa;
         box-shadow: 6px 0 6px rgba(0,0,0,.1);
     }
