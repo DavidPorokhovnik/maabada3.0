@@ -54,4 +54,15 @@
     .reviews-right-side-content {
         width: 100%;
     }
+    .reviews-left-side-content { padding: 0 24px; }
+    .reviews-right-side-content {
+        -webkit-order: -1;
+        order: -1;
+    }
+}
+
+@media only screen and (max-width : 360px) {
+    .contacts-link-360 {
+        display: none;
+    }
 }

@@ -50,10 +50,10 @@ header {
 }
 .phone-number, .phone-number-caption {
     line-height: 48px;
-    font-size: 20px;
     color: #2973ad;
 }
 .phone-number {
+    font-size: 19px;
     font-weight: 600;
 }
 .phone-number:hover {
@@ -61,6 +61,7 @@ header {
     cursor: pointer;
 }
 .phone-number-caption {
+    font-size: 20px;
     padding: 0 8px;
 }
 .title, .title-caption {
@@ -184,7 +185,8 @@ header {
     z-index: 2;
 }
 
-.dialog-paragraph, .message-paragraph, .alert-paragraph {
+.dialog-paragraph, .message-paragraph,
+.alert-paragraph, .mobile-dialog-paragraph {
     width: 100%;
     height: 20px;
     margin: 20px auto 0;
@@ -202,6 +204,7 @@ header {
     font-weight: 600;
     color: #f44336;
 }
+.mobile-dialog-paragraph { display: none; }
 /* ------- Works & Prices Tabs ------- */
 .works-container {
     display: -webkit-flex;
@@ -357,7 +360,7 @@ header {
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
-.accordion .link:hover {
+.accordion .link:hover, .accordion .link:hover i.fa-chevron-down {
     /*background-color: #dbdbdb;*/
     color: #63a1df;
 }
@@ -379,7 +382,7 @@ header {
     font-size: 14px;
 }
 .accordion li.open .link { color: #2973ad; }
-.accordion li.open i { color: #2973ad; }
+.accordion li.open i { color: #2973ad !important; }
 .accordion li.open i.fa-chevron-down {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
@@ -442,16 +445,24 @@ footer {
     align-items: flex-end;
     background-color: #00487d;
 }
-.footer-powered,
-.footer-rights {
+.footer-powered, .footer-rights {
     margin-bottom: 0;
     line-height: 74px;
     font-size: 14px;
 }
-.footer-powered {
+.footer-powered, .footer-powered-front, .footer-powered-back {
     padding-left: 24px;
     color: #eceff1;
     opacity: .8;
+}
+.footer-powered-front, .footer-powered-back {
+    margin-bottom: 0;
+    padding-bottom: 4px;
+    font-size: 14px;
+    display: none;
+}
+.footer-powered-back {
+    padding-bottom: 26px;
 }
 .footer-rights {
     padding-right: 24px;
@@ -479,8 +490,12 @@ footer {
     .dialog-paragraph {
         display: none;
     }
+    .mobile-dialog-paragraph {
+        display: block;
+        /*padding: 0 24px;*/
+    }
     .works-container {
-        margin: 40px auto 40px;
+        margin: 0 auto 40px;
     }
     .sidebar {
         display: none;
@@ -524,5 +539,39 @@ footer {
     }
     .order-form {
     width: 90%;
+    }
+}
+
+@media only screen and (max-width : 575px) {
+    .nav { padding: 0 24px 0 0; }
+    .nav-link { padding: 8px 8px; }
+    .contacts-link { display: none; }
+
+    .order-form {
+        width: 0;
+        min-width: 86%;
+        max-width: 92%;
+        margin: 0 24px 72px;
+    }
+    .dropdown-1-text-item {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width : 460px) {
+    .footer-container {
+        -webkit-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .footer-container div:first-child {
+        -webkit-order: 1;
+        order: 1;
+    }
+    .footer-rights, .footer-powered {
+        padding: 0 0 0 0;
     }
 }
