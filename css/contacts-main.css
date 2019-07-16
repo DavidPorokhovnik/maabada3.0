@@ -83,10 +83,12 @@
     margin-bottom: 40px;
     direction: rtl;
 }
-.contacts-link:hover {
+.contacts-to-order-link { color: #2973ad; }
+.contacts-to-order-link:hover {
     text-decoration: none;
-    color: #2973ad;
     font-weight: 600;
+    color: #00487d;
+    cursor: pointer;
 }
 
 .footer-container {
