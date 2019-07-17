@@ -31,6 +31,7 @@ $(document).ready(function(){
         $(document).on('click', '.mobile-sidebar-icon', function () {
             if ($('#mobile-sidebar-checkbox').not(':checked')) {
                 $('.mobile-sidebar-container').css({display: 'block'});
+                /*$('.mobile-sidebar')[0].className = 'open';*/
             }
             if ($('#mobile-sidebar-checkbox').is(':checked')) {
                 $('.mobile-sidebar-container').css({display: 'none'});
@@ -41,6 +42,13 @@ $(document).ready(function(){
         sidebar = $('.accordion');
     }
     /*});*/
+
+    $('.mobile-accordion').on('click', '.active-model', function() {
+        /*if ($('#mobile-sidebar-checkbox').is(':checked')) {*/
+        $('.mobile-sidebar-container').css({display: 'none'});
+        $('#mobile-sidebar-checkbox').removeAttr('checked');
+        /*}*/
+    })
 
 });
 
@@ -225,5 +233,9 @@ function createPrices(pricesArray, id, maker, type, model) {
     console.log(document.getElementsByClassName('work-field').length);
     if (document.getElementsByClassName('work-field').length === 0) {
         document.getElementById('fixing-model').innerHTML = maker + ' ' + type + ' ' + model +' ';
+        let worksModelArray = document.getElementsByClassName('fixing-model-work');
+        for (let i = 0; i < worksModelArray.length; i++ ) {
+            worksModelArray[i].innerHTML = maker + ' ' + type + ' ' + model +' ';
+        }
     }
 }

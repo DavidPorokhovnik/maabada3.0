@@ -15,6 +15,9 @@ html, body {
     font-family: 'Open Sans Hebrew', serif;
     letter-spacing: 1px;
 }
+/*body {
+    max-width: 1200px;
+}*/
 .row {
     padding: 0;
     margin: 0;
@@ -31,10 +34,8 @@ input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s eas
 input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
 input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
 input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
-/*--------------------- header ---------------------*/
-header {
 
-}
+/*--------------------- header ---------------------*/
 .toolbar-row {
     position: fixed;
     left: 0;
@@ -204,6 +205,9 @@ header {
 .work:hover {
     box-shadow: 0 6px 6px rgba(10, 16, 20, .24), 0 0 6px rgba(10, 16, 20, .12);
 }
+.fixing-model-work {
+    margin-bottom: 10px;
+}
 .work-name, .work-price {
     margin: 0;
 }
@@ -218,8 +222,11 @@ header {
     font-weight: 600;
     color: #b63b4d;
 }
+.price {
+    margin-right: 4px;
+}
 .fa-shekel {
-    padding: 0 4px;
+    /*padding: 0 4px;*/
     font-size: 14px;
 }
 /* ------- End of Works & Prices Tabs ------- */
