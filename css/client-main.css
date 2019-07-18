@@ -53,18 +53,29 @@ input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s eas
     padding: 0 24px;
     background-color: #fafafa;
 }
-.phone-number, .phone-number-caption {
+.toolbar-left-item:hover .fa-phone-square {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    color: #00487d;
+}
+.fa-phone-square {
+    margin-right: 6px;
+    font-size: 19px;
+    font-weight: 200;
+}
+.fa-phone-square, .phone-number, .phone-number-caption {
     line-height: 48px;
     color: #2973ad;
 }
 .phone-number {
     font-size: 19px;
     font-weight: 600;
-    color: #b63b4d;
+    cursor: pointer;
 }
 .phone-number:hover {
     color: #00487d;
-    cursor: pointer;
 }
 .phone-number-caption {
     font-size: 20px;
@@ -339,7 +350,6 @@ input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s eas
 /*.accordion li:last-child .link { border-bottom: 0; }*/
 .accordion li i,
 .mobile-accordion li i{
-    font-family: fontawesome;
     position: absolute;
     top: 12px;
     left: 12px;

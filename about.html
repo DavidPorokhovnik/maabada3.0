@@ -24,12 +24,13 @@
 
     <div class="toolbar-row">
 
-        <div class="toolbar-row-item">
+        <div class="toolbar-left-item">
+            <span class="fa fa-phone-square"></span>
             <a class="phone-number" href="tel:0527707494" style="text-decoration:none" title="Call">052-7707494</a>
             <span class="phone-number-caption no-displayed">לתושבי נתניה והסביבה</span>
         </div>
 
-        <div class="toolbar-row-item">
+        <div class="toolbar-right-item">
             <span class="title no-displayed">תיקון סמארטפון </span>
             <span class="title-caption">מגיעים עד אליך</span>
         </div>
@@ -111,7 +112,7 @@
             ולתקן את הבעיה במקום. צור קשר כעת להצעת מחיר</p>
 
         <div class="about-dropdown">
-            <h6 class="dropdown-1-headline">? איזה שירותי תיקונים אנחנו מבצעים</h6>
+            <h6 class="dropdown-1-headline">? איזה שירותי תיקונים אנחנו מבצעים<i class="fa fa-chevron-down"></i></h6>
         </div>
 
         <div class="row open-close-container-1">
@@ -141,7 +142,7 @@
         </div>
 
         <div class="about-dropdown">
-            <h6 class="dropdown-2-headline">אזורי השירות נתניה והסביבה</h6>
+            <h6 class="dropdown-2-headline">אזורי השירות נתניה והסביבה<i class="fa fa-chevron-down"></i></h6>
         </div>
 
         <div class="row open-close-container-2">
@@ -154,7 +155,7 @@
         </div>
 
         <div class="about-dropdown">
-            <h6 class="dropdown-3-headline">מעבדה מקצועית עם הסמכה ואחריות</h6>
+            <h6 class="dropdown-3-headline">מעבדה מקצועית עם הסמכה ואחריות<i class="fa fa-chevron-down"></i></h6>
         </div>
 
         <div class="row open-close-container-3">
@@ -174,7 +175,7 @@
             </div>
             <div>
                 <p class="footer-rights">
-                    <span> &#169; 2019</span>
+                    <span class="fa fa-copyright"></span><span> 2019</span>
                     <span> כל הזכויות שמורות לאתר</span>
                 </p>
             </div>
@@ -188,12 +189,15 @@
 
     $(document).ready(function () {
         $('.dropdown-1-headline').click(function () {
+            $(this).toggleClass('open');
             $('.open-close-container-1').slideToggle('slow');
         });
         $('.dropdown-2-headline').click(function () {
+            $(this).toggleClass('open');
             $('.open-close-container-2').slideToggle('slow');
         });
         $('.dropdown-3-headline').click(function () {
+            $(this).toggleClass('open');
             $('.open-close-container-3').slideToggle('slow');
         })
     })

@@ -81,8 +81,8 @@ function createMakers(makersArray) {
     let output = '';
     for (let i = 0; i < makersArray.length; i++) {
         //let maker = makersArray[i].charAt(0).toUpperCase() + makersArray[i].slice(1);
-        output += '<li class="sidebar-item"><div class="link" id="' + makersArray[i] + '" onclick="getTypes(id)">' + makersArray[i] +
-            '<i class="fa fa-chevron-down"></i></div><ul class="submenu"></ul></li>';
+        output += '<li class="sidebar-item"><div class="link" id="' + makersArray[i] + '" onclick="getTypes(id)">' +
+            makersArray[i] + '<i class="fa fa-chevron-down"></i></div><ul class="submenu"></ul></li>';
     }
     /*$('.accordion').empty().append(output);
     $('.mobile-accordion').empty().append(output);*/
